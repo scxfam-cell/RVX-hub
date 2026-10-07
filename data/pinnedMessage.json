@@ -1,0 +1,50 @@
+{
+  "1518067080560246856": {
+    "messageId": "1555976800713318421",
+    "content": "🔥 𝗥𝗩𝗫 v2 • ระบบอัปโหลดเพลง\n\n🎵 ส่ง ID เพลงเพื่อเพิ่มลงเว็บไซต์\n\n📝 รูปแบบการส่ง\n<รหัสเพลง> <ชื่อเพลง>\n\nตัวอย่าง\n`10000001 เพลงรักในใจ`\n`10000002 คิดถึงเสมอ`\n`10000003 คนเดิมที่หายไป`\n\n────────────────\n\n⚠️ กฎการใช้งาน\n• ส่งเฉพาะตามรูปแบบที่กำหนด\n• หากพิมพ์ไม่ถูกต้อง บอทจะลบข้อความอัตโนมัติ\n• หาก ID เพลงมีอยู่ในระบบแล้ว บอทจะแจ้งว่า \"ซ้ำ\" และจะไม่เพิ่มข้อมูล\n\n────────────────\n\n🌐 เว็บไซต์\nhttp://de3.bot-hosting.net:20209/\n\n✅ กรุณาตรวจสอบ ID เพลงและชื่อเพลงก่อนส่งทุกครั้ง",
+    "image": null,
+    "style": "v2"
+  },
+  "1542646557847982101": {
+    "messageId": "1556017663988338799",
+    "content": "#  https://discord.com/channels/1514875481315344486/1554861220992122911",
+    "image": null,
+    "style": "v2"
+  },
+  "1530332753982259301": {
+    "messageId": "1552186225257881622",
+    "content": "https://www.roblox.com/share?code=44a3851c01920a46870eb4f9fca21d8f&type=ExperienceDetails&stamp=1785571570977",
+    "image": "https://media.discordapp.net/attachments/1518593515712413706/1547215831983984731/image.png?ex=6aa29c88&is=6aa14b08&hm=e4f6328ea6b7a21650dac2b86f6122a0ca339fc11cfb2c4a1dfaec8715717e35&=&format=webp&quality=lossless&width=640&height=360",
+    "style": "v2"
+  },
+  "1523075359359373483": {
+    "messageId": "1548837869534052484",
+    "content": "พิมพ์ชื่อเต็มของแมพ หรือชื่อค่ายสคริปต์ก็ได้ (ไม่รองรับภาษาไทย)",
+    "image": null,
+    "style": "v2"
+  },
+  "1522652591085981726": {
+    "messageId": "1554502346841661521",
+    "content": "พาทเนอร์ติดต่อ <@1221412727306850355> <a:check:1530909735346372698>",
+    "image": null,
+    "style": "plain"
+  },
+  "1542532767902867476": {
+    "messageId": "1551018695931732010",
+    "content": "ยืนยันตัวตนเพื่อดูห้องทั้งหมด\nhttps://discord.com/channels/1514875481315344486/1514877095648432128\n\nVerify to access all channels\nhttps://discord.com/channels/1514875481315344486/1514877095648432128",
+    "image": null,
+    "style": "v2"
+  },
+  "1524197944067358871": {
+    "messageId": "1554447084604620853",
+    "content": "# RVX HUB \n\n``loadstring(game:HttpGet(\"https://raw.githubusercontent.com/xxxx01w/Rvxhup/main/main.lua\"))()``\n\n```loadstring(game:HttpGet(\"https://raw.githubusercontent.com/xxxx01w/Rvxhup/main/main.lua\"))()```\n\n||@[+] สมาชิก ||",
+    "image": null,
+    "style": "v2"
+  },
+  "1548731627834966107": {
+    "messageId": "1550316705459208223",
+    "content": "พิมพ์ชื่อแมพได้เลยไม่ต้องใช้คำสั่ง",
+    "image": null,
+    "style": "v2"
+  }
+}

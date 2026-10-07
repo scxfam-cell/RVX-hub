@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Admin — แผงควบคุม</title>
+<style>
+  :root{
+    color-scheme: dark;
+    --bg:        #000000;
+    --panel:     #161618;
+    --panel2:    #1e1e21;
+    --panel3:    #2a2a2e;
+    --border:    rgba(255,255,255,.09);
+    --border-soft: rgba(255,255,255,.06);
+    --text:      #f5f5f7;
+    --muted:     rgba(235,235,245,.62);
+    --faint:     rgba(235,235,245,.32);
+
+    --accent:    #0a84ff;
+    --accent-soft: rgba(10,132,255,.16);
+    --accent-2:  #5e5ce6;
+
+    --green:     #30d158;
+    --green-soft:rgba(48,209,88,.15);
+    --red:       #ff453a;
+    --red-soft:  rgba(255,69,58,.15);
+    --orange:    #ff9f0a;
+    --orange-soft:rgba(255,159,10,.15);
+    --blue-soft: rgba(10,132,255,.15);
+
+    --r-sm: 10px;
+    --r-md: 14px;
+    --r-lg: 20px;
+    --r-pill: 999px;
+
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:15px; line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  a{ color:inherit; }
+  ::selection{ background:var(--accent); color:#fff; }
+  ::-webkit-scrollbar{ width:10px; height:10px; }
+  ::-webkit-scrollbar-thumb{ background:var(--panel3); border-radius:99px; border:2px solid var(--bg); }
+  ::-webkit-scrollbar-track{ background:transparent; }
+
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; border-radius:6px; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:.001ms !important; transition-duration:.001ms !important; }
+  }
+
+  .ic{ display:block; flex-shrink:0; }
+
+  /* ── Shell / Layout ─────────────────────────────────── */
+  .shell{ display:flex; min-height:100vh; }
+
+  .topbar{
+    display:none; position:sticky; top:0; z-index:40; align-items:center; gap:12px;
+    padding:12px 16px; background:rgba(10,10,12,.82); backdrop-filter:blur(20px) saturate(180%);
+    border-bottom:1px solid var(--border-soft);
+    padding-top:calc(12px + env(safe-area-inset-top,0px));
+  }
+  .menu-btn{ all:unset; cursor:pointer; width:36px; height:36px; display:grid; place-items:center; border-radius:var(--r-sm); color:var(--text); }
+  .menu-btn:hover{ background:rgba(255,255,255,.08); }
+  .drawer-backdrop{ display:none; position:fixed; inset:0; z-index:45; background:rgba(0,0,0,.55); backdrop-filter:blur(2px); }
+  .drawer-backdrop.show{ display:block; }
+
+  .sidebar{
+    width:248px; flex-shrink:0; background:var(--panel);
+    border-right:1px solid var(--border-soft); padding:20px 14px;
+    position:sticky; top:0; height:100vh; overflow-y:auto;
+    display:flex; flex-direction:column;
+  }
+  .brand{ display:flex; align-items:center; gap:11px; padding:2px 8px 22px; }
+  .brand .mark{
+    width:34px; height:34px; border-radius:10px; flex-shrink:0;
+    background:linear-gradient(150deg,var(--accent),var(--accent-2));
+    display:grid; place-items:center; box-shadow:0 4px 14px rgba(10,132,255,.35);
+  }
+  .brand .mark svg{ width:18px; height:18px; color:#fff; }
+  .brand .txt b{ display:block; font-size:15px; font-weight:700; letter-spacing:-.2px; }
+  .brand .txt small{ display:block; font-size:11.5px; color:var(--faint); font-weight:500; }
+
+  nav.tabs{ display:flex; flex-direction:column; gap:2px; }
+  nav.tabs button{
+    all:unset; cursor:pointer; padding:9px 11px; border-radius:var(--r-sm);
+    font-size:13.5px; font-weight:590; color:var(--muted);
+    display:flex; align-items:center; gap:10px; position:relative;
+    transition:background .15s ease, color .15s ease;
+  }
+  nav.tabs button svg{ opacity:.85; }
+  nav.tabs button:hover{ background:rgba(255,255,255,.05); color:var(--text); }
+  nav.tabs button.active{ background:var(--accent-soft); color:var(--text); }
+  nav.tabs button.active svg{ color:var(--accent); opacity:1; }
+
+  .sidebar .foot{ margin-top:auto; padding-top:16px; border-top:1px solid var(--border-soft); }
+  .sidebar .foot a{
+    font-size:12.5px; color:var(--muted); text-decoration:none; display:flex; align-items:center; gap:8px;
+    padding:8px 11px; border-radius:var(--r-sm);
+  }
+  .sidebar .foot a:hover{ color:var(--text); background:rgba(255,255,255,.05); }
+
+  main{ flex:1; padding:30px 34px 70px; max-width:1080px; min-width:0; }
+  .page-title{ font-size:22px; font-weight:750; letter-spacing:-.3px; margin:2px 0 4px; display:flex; align-items:center; gap:10px; }
+  .page-sub{ color:var(--muted); font-size:13px; margin:0 0 24px; }
+
+  section.view{ display:none; }
+  section.view.active{ display:block; animation:viewIn .28s cubic-bezier(.22,1,.36,1); }
+  @keyframes viewIn{ from{ opacity:0; transform:translateY(6px); } to{ opacity:1; transform:translateY(0); } }
+
+  /* ── Stat grid ──────────────────────────────────────── */
+  .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:24px; }
+  .stat{ background:var(--panel); border:1px solid var(--border-soft); border-radius:var(--r-md); padding:16px 18px; }
+  .stat .num{ font-size:25px; font-weight:750; letter-spacing:-.4px; font-variant-numeric:tabular-nums; }
+  .stat .lbl{ font-size:12px; color:var(--muted); margin-top:4px; }
+
+  /* ── Card ───────────────────────────────────────────── */
+  .card{ background:var(--panel); border:1px solid var(--border-soft); border-radius:var(--r-lg); padding:18px 20px; margin-bottom:16px; }
+  .card h3{ margin:0 0 14px; font-size:14px; font-weight:700; display:flex; align-items:center; gap:9px; color:var(--text); }
+  .card h3 svg{ color:var(--accent); }
+  .card h3 .n{ font-weight:500; color:var(--faint); font-size:12px; margin-left:auto; }
+  .card .hint{ color:var(--muted); font-size:12px; margin:10px 0 0; line-height:1.55; }
+
+  /* ── Forms ──────────────────────────────────────────── */
+  .row{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  input, select{
+    background:var(--panel2); border:1px solid var(--border); color:var(--text);
+    padding:10px 12px; border-radius:var(--r-sm); font-size:13.5px; outline:none;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  input::placeholder{ color:var(--faint); }
+  input:focus, select:focus{ border-color:var(--accent); background:var(--panel3); }
+  input[type=number]{ width:110px; }
+  select{ appearance:none; -webkit-appearance:none; padding-right:30px;
+    background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23ebebf599" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+    background-repeat:no-repeat; background-position:right 8px center; background-size:16px;
+  }
+
+  button{ font-family:inherit; }
+  button.btn{
+    all:unset; box-sizing:border-box; cursor:pointer; padding:10px 16px; border-radius:var(--r-pill);
+    font-size:13.5px; font-weight:650; background:var(--panel3); color:var(--text);
+    display:inline-flex; align-items:center; gap:7px; white-space:nowrap;
+    transition:transform .1s ease, background .15s ease, opacity .15s ease;
+  }
+  button.btn:hover{ background:#333338; }
+  button.btn:active{ transform:scale(.96); }
+  button.btn.accent{ background:var(--accent); color:#fff; }
+  button.btn.accent:hover{ background:#2b93ff; }
+  button.btn.ghost{ background:transparent; border:1px solid var(--border); color:var(--text); }
+  button.btn.ghost:hover{ background:rgba(255,255,255,.06); }
+  button.btn.danger{ background:var(--red-soft); color:var(--red); }
+  button.btn.danger:hover{ background:rgba(255,69,58,.25); }
+  button.btn:disabled{ opacity:.5; cursor:not-allowed; transform:none; }
+  button.btn .btn-ic{ display:flex; }
+  button.btn.is-busy .btn-ic svg{ animation:spin .9s linear infinite; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  button.icon{
+    all:unset; cursor:pointer; width:30px; height:30px; display:grid; place-items:center;
+    border-radius:var(--r-sm); color:var(--muted); transition:background .15s ease,color .15s ease,transform .1s ease;
+  }
+  button.icon:hover{ background:rgba(255,255,255,.08); color:var(--text); }
+  button.icon:active{ transform:scale(.9); }
+  button.icon.delete-btn:hover, button.icon.remove-role-btn:hover,
+  button.icon.clear-cosmetic-sale-btn:hover, button.icon.revoke-btn:hover{ color:var(--red); background:var(--red-soft); }
+  button.icon.unban-btn:hover, button.icon.unban-user-btn:hover{ color:var(--green); background:var(--green-soft); }
+
+  /* ── Table ──────────────────────────────────────────── */
+  [id$="Wrap"]{ overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:var(--r-md); }
+  table{ width:100%; border-collapse:collapse; font-size:13px; min-width:520px; }
+  th{ text-align:left; color:var(--faint); font-weight:600; font-size:11.5px;
+      padding:0 10px 10px; }
+  td{ padding:12px 10px; border-top:1px solid var(--border-soft); vertical-align:middle; }
+  tbody tr{ transition:background .12s ease; }
+  tbody tr:hover{ background:rgba(255,255,255,.035); }
+  td.mono{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11.5px; color:var(--faint); margin-top:2px; }
+  .empty, .loading{ padding:30px 10px; text-align:center; color:var(--muted); font-size:13px; }
+  .loading{ display:flex; align-items:center; justify-content:center; gap:10px; }
+  .loading::before{
+    content:""; width:15px; height:15px; border-radius:50%;
+    border:2px solid var(--border); border-top-color:var(--accent);
+    animation:spin .7s linear infinite;
+  }
+
+  .badge{ display:inline-flex; align-items:center; gap:6px; padding:3px 10px; border-radius:var(--r-pill); font-size:11px; font-weight:650; }
+  .badge.good{ background:var(--green-soft); color:var(--green); }
+  .badge.warn{ background:var(--orange-soft); color:var(--orange); }
+  .badge.info{ background:var(--blue-soft); color:var(--accent); }
+  .badge.danger{ background:var(--red-soft); color:var(--red); }
+  .badge.online-pill{ padding:4px 10px 4px 8px; }
+  .pulse-dot{ width:7px; height:7px; border-radius:50%; background:var(--green); position:relative; flex-shrink:0; }
+  .pulse-dot::after{
+    content:""; position:absolute; inset:-4px; border-radius:50%; background:var(--green);
+    opacity:.5; animation:pulse 1.8s ease-out infinite;
+  }
+  @keyframes pulse{ 0%{ transform:scale(.6); opacity:.6; } 100%{ transform:scale(2.1); opacity:0; } }
+
+  .avatar-sm{ width:26px; height:26px; border-radius:50%; object-fit:cover; vertical-align:middle; margin-right:9px; background:var(--panel3); }
+  .user-cell{ display:flex; align-items:center; }
+
+  .toast{
+    position:fixed; bottom:22px; right:22px; left:auto; background:#1c1c1ef2; border:1px solid var(--border);
+    padding:13px 16px; border-radius:var(--r-md); font-size:13px; font-weight:560; box-shadow:var(--shadow);
+    backdrop-filter:blur(20px);
+    opacity:0; transform:translateY(10px) scale(.97); transition:.22s cubic-bezier(.22,1,.36,1);
+    pointer-events:none; z-index:80; max-width:320px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .toast.show{ opacity:1; transform:translateY(0) scale(1); }
+  .toast.err{ border-color:rgba(255,69,58,.35); }
+  .toast.err .t-ic{ color:var(--red); }
+  .toast.ok .t-ic{ color:var(--green); }
+  @media (max-width:600px){ .toast{ left:16px; right:16px; bottom:16px; max-width:none; } }
+
+  .newkey{
+    background:var(--green-soft); border:1px solid rgba(48,209,88,.3); border-radius:var(--r-md);
+    padding:14px 16px; margin-top:12px; font-size:13px;
+  }
+  .newkey-head{ display:flex; align-items:center; gap:8px; color:#a7f3d0; font-weight:600; }
+  .newkey code{ display:block; margin-top:8px; word-break:break-all; font-size:12.5px; color:var(--green);
+    background:rgba(0,0,0,.25); padding:8px 10px; border-radius:8px; }
+
+  /* ── Scan progress ────────────────────────────────────── */
+  .scan-progress{ margin-top:16px; }
+  .scan-progress .meta{ display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-bottom:7px; font-variant-numeric:tabular-nums; }
+  .scan-progress .track{ background:var(--panel2); border-radius:var(--r-pill); height:7px; overflow:hidden; }
+  .scan-progress .bar{ background:linear-gradient(90deg,var(--accent),var(--accent-2)); height:100%; width:0%; transition:width .35s cubic-bezier(.22,1,.36,1); border-radius:var(--r-pill); }
+
+  /* ── Nav alert badges ─────────────────────────────────── */
+  nav.tabs button{ justify-content:flex-start; }
+  nav.tabs button .nav-badge{
+    margin-left:auto; min-width:18px; height:18px; padding:0 5px; border-radius:var(--r-pill);
+    background:var(--red); color:#fff; font-size:10.5px; font-weight:750;
+    display:none; align-items:center; justify-content:center; line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  nav.tabs button .nav-badge.show{ display:inline-flex; }
+
+  /* ── Danger-confirm modal ─────────────────────────────── */
+  .modal-backdrop{
+    display:none; position:fixed; inset:0; z-index:90; background:rgba(0,0,0,.6); backdrop-filter:blur(3px);
+    align-items:center; justify-content:center; padding:20px;
+  }
+  .modal-backdrop.show{ display:flex; }
+  .modal{
+    width:100%; max-width:400px; background:var(--panel2); border:1px solid var(--border);
+    border-radius:var(--r-lg); padding:22px; box-shadow:var(--shadow);
+    animation:modalIn .2s cubic-bezier(.22,1,.36,1);
+  }
+  @keyframes modalIn{ from{ opacity:0; transform:translateY(10px) scale(.97); } to{ opacity:1; transform:translateY(0) scale(1); } }
+  .modal .m-icon{
+    width:42px; height:42px; border-radius:12px; background:var(--red-soft); color:var(--red);
+    display:grid; place-items:center; margin-bottom:14px;
+  }
+  .modal h4{ margin:0 0 6px; font-size:16px; font-weight:750; }
+  .modal p{ margin:0 0 16px; font-size:13px; color:var(--muted); line-height:1.6; }
+  .modal .m-hint{ font-size:12px; color:var(--faint); margin:8px 0 0; }
+  .modal input{ width:100%; }
+  .modal .m-actions{ display:flex; gap:8px; margin-top:18px; justify-content:flex-end; }
+
+  /* ── Trend charts ─────────────────────────────────────── */
+  .chart-head{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .chart-head .legend{ display:flex; gap:14px; margin-left:auto; font-size:11.5px; color:var(--muted); }
+  .chart-head .legend span{ display:inline-flex; align-items:center; gap:6px; }
+  .chart-head .legend i{ width:8px; height:8px; border-radius:50%; display:inline-block; }
+  .segmented{ display:inline-flex; background:var(--panel2); border-radius:var(--r-pill); padding:3px; gap:2px; }
+  .segmented button{
+    all:unset; cursor:pointer; padding:5px 11px; border-radius:var(--r-pill); font-size:11.5px; font-weight:650;
+    color:var(--muted); transition:background .15s ease, color .15s ease;
+  }
+  .segmented button.active{ background:var(--accent); color:#fff; }
+  .chart-wrap{ width:100%; overflow:hidden; }
+  .chart-wrap svg{ width:100%; height:auto; display:block; }
+  .chart-empty{ padding:36px 0; text-align:center; color:var(--faint); font-size:12.5px; }
+  .chart-dot{ opacity:0; transition:opacity .12s ease; }
+  .chart-pt:hover .chart-dot{ opacity:1; }
+
+  /* ── Cosmetics preview ────────────────────────────────── */
+  .cosmetic-thumb{
+    width:40px; height:40px; border-radius:10px; object-fit:cover; background:var(--panel3);
+    border:1px solid var(--border-soft); vertical-align:middle;
+  }
+  .cosmetic-thumb-ph{
+    width:40px; height:40px; border-radius:10px; background:var(--panel3); border:1px solid var(--border-soft);
+    display:grid; place-items:center; color:var(--faint);
+  }
+  .cosmetic-cell{ display:flex; align-items:center; gap:12px; }
+
+  /* ── Coin history ─────────────────────────────────────── */
+  .coin-history-head{ display:flex; align-items:center; gap:8px; margin:22px 0 10px; padding-top:18px; border-top:1px solid var(--border-soft); font-size:13px; font-weight:700; }
+  .coin-history-head svg{ color:var(--accent); }
+  td.amt-pos{ color:var(--green); font-weight:650; font-variant-numeric:tabular-nums; }
+  td.amt-neg{ color:var(--red); font-weight:650; font-variant-numeric:tabular-nums; }
+
+  @media (max-width: 900px){
+    .sidebar{
+      position:fixed; z-index:50; top:0; left:0; height:100vh; width:270px;
+      transform:translateX(-104%); transition:transform .28s cubic-bezier(.22,1,.36,1);
+      box-shadow:0 0 0 1px var(--border-soft);
+      padding-top:calc(20px + env(safe-area-inset-top,0px));
+    }
+    .sidebar.open{ transform:translateX(0); }
+    .topbar{ display:flex; }
+    main{ padding:20px 16px 60px; }
+    .shell{ flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <div class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-label="เมนู">
+      <svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button>
+    <div class="brand" style="padding:0;">
+      <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+      <div class="txt"><b>Admin</b></div>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+      <div class="txt"><b>Admin</b><small>แผงควบคุมระบบ</small></div>
+    </div>
+    <nav class="tabs">
+      <button data-tab="overview" class="active">
+        <svg class="ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6" rx="1"/><rect x="12" y="8" width="3" height="10" rx="1"/><rect x="17" y="5" width="3" height="13" rx="1"/></svg>
+        <span>ภาพรวม</span>
+        <span class="nav-badge" id="badge-overview"></span>
+      </button>
+      <button data-tab="songs">
+        <svg class="ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <span>จัดการเพลง</span>
+        <span class="nav-badge" id="badge-songs"></span>
+      </button>
+      <button data-tab="roles">
+        <svg class="ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 12.6L12.6 20.6a2 2 0 0 1-2.8 0l-7.4-7.4a2 2 0 0 1 0-2.8L10.4 2.4A2 2 0 0 1 11.8 2H18a2 2 0 0 1 2 2v6.2a2 2 0 0 1-.6 1.4Z"/><circle cx="15.5" cy="7.5" r="1.3"/></svg>
+        <span>ยศ/ร้านค้า</span>
+        <span class="nav-badge" id="badge-roles"></span>
+      </button>
+      <button data-tab="coins">
+        <svg class="ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9.4c0-1 1-1.6 2.3-1.6s2.3.7 2.3 1.8c0 2.3-4.6 1.7-4.6 4 0 1.1 1 1.8 2.3 1.8S14 14.9 14 13.9"/><path d="M12 6.3v1.2"/><path d="M12 16.2v1.2"/></svg>
+        <span>เหรียญผู้ใช้</span>
+        <span class="nav-badge" id="badge-coins"></span>
+      </button>
+      <button data-tab="cosmetics">
+        <svg class="ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20c1.2 0 2-.9 2-2 0-.5-.2-.9-.5-1.3-.3-.3-.5-.8-.5-1.2 0-1 .9-1.5 1.9-1.5H17a4 4 0 0 0 4-4c0-5.5-4.5-10-9-10Z"/><circle cx="7.5" cy="10.3" r="1.15"/><circle cx="10.3" cy="6.9" r="1.15"/><circle cx="15" cy="7.4" r="1.15"/><circle cx="16.9" cy="11.6" r="1.15"/></svg>
+        <span>คอสเมติก</span>
+        <span class="nav-badge" id="badge-cosmetics"></span>
+      </button>
+      <button data-tab="webusers">
+        <svg class="ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+        <span>ผู้ใช้ทั้งหมด</span>
+        <span class="nav-badge" id="badge-webusers"></span>
+      </button>
+      <button data-tab="ipbans">
+        <svg class="ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4Z"/><path d="M4.5 4.5l15 15"/></svg>
+        <span>แบน IP</span>
+        <span class="nav-badge" id="badge-ipbans"></span>
+      </button>
+      <button data-tab="keys">
+        <svg class="ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.6 12.4L20 3"/><path d="M16.2 6.8l2.6 2.6"/><path d="M13.4 9.6l2 2"/></svg>
+        <span>API Key</span>
+        <span class="nav-badge" id="badge-keys"></span>
+      </button>
+    </nav>
+    <div class="foot">
+      <a href="/">
+        <svg class="ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>
+        กลับหน้าเว็บหลัก
+      </a>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- ═══ Overview ═══ -->
+    <section class="view active" id="view-overview">
+      <div class="page-title">ภาพรวมระบบ</div>
+      <p class="page-sub">สรุปสถิติรวมของทั้งเว็บ</p>
+
+      <div class="grid" id="statGrid">
+        <div class="loading">กำลังโหลด…</div>
+      </div>
+
+      <div class="card">
+        <div class="chart-head">
+          <h3 style="margin:0;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 9l-5 5-3-3-4 4"/></svg>
+            เพลง: เพิ่ม / ลบ ต่อวัน
+          </h3>
+          <div class="legend">
+            <span><i style="background:var(--accent);"></i>เพิ่ม</span>
+            <span><i style="background:var(--red);"></i>ลบ</span>
+          </div>
+          <div class="segmented" id="trendRange" data-days="14">
+            <button data-days="7">7 วัน</button>
+            <button class="active" data-days="14">14 วัน</button>
+            <button data-days="30">30 วัน</button>
+          </div>
+        </div>
+        <div class="chart-wrap" id="songsTrendChart"><div class="loading">กำลังโหลด…</div></div>
+      </div>
+
+      <div class="card">
+        <div class="chart-head">
+          <h3 style="margin:0;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            ผู้ใช้ใหม่ต่อวัน
+          </h3>
+          <div class="legend"><span><i style="background:var(--green);"></i>ผู้ใช้ใหม่</span></div>
+        </div>
+        <div class="chart-wrap" id="usersTrendChart"><div class="loading">กำลังโหลด…</div></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4a3 3 0 0 0 3 3"/><path d="M17 5h3a3 3 0 0 1-3 3"/></svg>
+          ผู้ส่งเพลงสูงสุด <span class="n">10 อันดับแรก</span>
+        </h3>
+        <div id="leaderboardWrap"><div class="loading">กำลังโหลด…</div></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
+          เพลงที่ถูกลบล่าสุด <span class="n">20 รายการ</span>
+        </h3>
+        <div id="deletionsWrap"><div class="loading">กำลังโหลด…</div></div>
+      </div>
+    </section>
+
+    <!-- ═══ Songs ═══ -->
+    <section class="view" id="view-songs">
+      <div class="page-title">จัดการเพลง</div>
+      <p class="page-sub">ค้นหา แก้ไขชื่อ หรือลบเพลงออกจากคลัง</p>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4Z"/></svg>
+          สแกนตรวจแบนทั้งหมด
+        </h3>
+        <div class="row" style="justify-content:space-between;">
+          <p class="hint" style="margin:0;max-width:520px;">
+            ไล่เช็คทุกเพลงในคลังกับ Roblox ทีละเพลง เพลงที่โดนแบนจะถูกลบออกจากระบบทันที
+            (ระบบสแกนอัตโนมัติรันเองทุก 6 ชั่วโมงอยู่แล้ว ปุ่มนี้ไว้กดสแกนด่วนเพิ่มเติมได้)
+          </p>
+          <button class="btn accent" id="scanBtn">
+            <span class="btn-ic" id="scanBtnIcon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4Z"/></svg></span>
+            <span id="scanBtnLabel">สแกนตรวจแบนทั้งหมด</span>
+          </button>
+        </div>
+        <div class="scan-progress" id="scanProgressWrap" style="display:none;">
+          <div class="meta">
+            <span id="scanProgressLabel">กำลังสแกน…</span>
+            <span id="scanProgressCount">0 / 0</span>
+          </div>
+          <div class="track"><div id="scanProgressBar" class="bar"></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="row" style="margin-bottom:14px;">
+          <input id="songSearch" type="text" placeholder="ค้นหาชื่อเพลงหรือ ID…" style="flex:1;min-width:220px;" />
+          <button class="btn ghost" id="songSearchBtn">
+            <span class="btn-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+            ค้นหา
+          </button>
+        </div>
+        <div id="songsWrap"><div class="loading">กำลังโหลด…</div></div>
+      </div>
+    </section>
+
+    <!-- ═══ Roles / Shop ═══ -->
+    <section class="view" id="view-roles">
+      <div class="page-title">จัดการยศ / ร้านค้า</div>
+      <p class="page-sub">เพิ่ม แก้ราคา หรือลบยศออกจากร้านแลกเหรียญ</p>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+          เพิ่ม / แก้ไขยศในร้าน
+        </h3>
+        <div class="row">
+          <select id="roleSelect" style="min-width:220px;"><option>กำลังโหลดยศจากดิสคอร์ด…</option></select>
+          <input id="rolePrice" type="number" min="0" placeholder="ราคา (เหรียญ)" />
+          <button class="btn accent" id="roleAddBtn">
+            <span class="btn-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            บันทึกลงร้าน
+          </button>
+        </div>
+        <p class="hint">เลือกยศที่ต้องการ ระบบจะดึงชื่อยศให้เอง — ถ้ายศนั้นอยู่ในร้านแล้วจะเป็นการแก้ราคาแทน</p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 3h2l2.4 12.4a2 2 0 0 0 2 1.6h9.2a2 2 0 0 0 2-1.6L22 7H6"/></svg>
+          ยศในร้านตอนนี้ <span class="n" id="roleCount"></span>
+        </h3>
+        <div id="rolesWrap"><div class="loading">กำลังโหลด…</div></div>
+      </div>
+    </section>
+
+    <!-- ═══ Coins ═══ -->
+    <section class="view" id="view-coins">
+      <div class="page-title">จัดการเหรียญผู้ใช้</div>
+      <p class="page-sub">ค้นหาผู้ใช้ด้วย User ID (ดิสคอร์ด) เพื่อดูยอดเหรียญ แล้วเพิ่มหรือหักเหรียญได้โดยตรง</p>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          ค้นหาผู้ใช้
+        </h3>
+        <div class="row">
+          <input id="coinUserId" type="text" placeholder="User ID (ตัวเลขไอดีดิสคอร์ด)" style="flex:1;min-width:240px;" />
+          <button class="btn ghost" id="coinLookupBtn">
+            <span class="btn-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+            ค้นหา
+          </button>
+        </div>
+        <div id="coinUserResult" style="margin-top:16px;"></div>
+      </div>
+    </section>
+
+    <!-- (coin-history + reason field render inside #coinUserResult via JS, see lookupCoinUser) -->
+
+    <!-- ═══ Cosmetics ═══ -->
+    <section class="view" id="view-cosmetics">
+      <div class="page-title">จัดการร้านคอสเมติก</div>
+      <p class="page-sub">แก้ราคาปกติของธีมสี/กรอบโปรไฟล์ หรือตั้งลดราคาชั่วคราวแบบกำหนดวัน-เวลาหมดโปรได้</p>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 12.6L12.6 20.6a2 2 0 0 1-2.8 0l-7.4-7.4a2 2 0 0 1 0-2.8L10.4 2.4A2 2 0 0 1 11.8 2H18a2 2 0 0 1 2 2v6.2a2 2 0 0 1-.6 1.4Z"/><circle cx="15.5" cy="7.5" r="1.3"/></svg>
+          ตั้งลดราคาไอเทม
+        </h3>
+        <div class="row">
+          <select id="cosmeticSaleSelect" style="min-width:200px;"><option>กำลังโหลด…</option></select>
+          <input id="cosmeticSalePrice" type="number" min="0" placeholder="ราคาลด (เหรียญ)" />
+          <input id="cosmeticSaleUntil" type="datetime-local" />
+          <button class="btn accent" id="cosmeticSaleBtn">
+            <span class="btn-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 12.6L12.6 20.6a2 2 0 0 1-2.8 0l-7.4-7.4a2 2 0 0 1 0-2.8L10.4 2.4A2 2 0 0 1 11.8 2H18a2 2 0 0 1 2 2v6.2a2 2 0 0 1-.6 1.4Z"/></svg></span>
+            ตั้งลดราคา
+          </button>
+        </div>
+        <p class="hint">ราคาลดต้องน้อยกว่าราคาปกติ — พอถึงวัน-เวลาที่ตั้งไว้ ราคาจะกลับเป็นปกติเองอัตโนมัติทันที ไม่ต้องมากดยกเลิกเอง</p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20c1.2 0 2-.9 2-2 0-.5-.2-.9-.5-1.3-.3-.3-.5-.8-.5-1.2 0-1 .9-1.5 1.9-1.5H17a4 4 0 0 0 4-4c0-5.5-4.5-10-9-10Z"/></svg>
+          ไอเทมทั้งหมดในร้าน <span class="n" id="cosmeticCount"></span>
+        </h3>
+        <div id="cosmeticsWrap"><div class="loading">กำลังโหลด…</div></div>
+      </div>
+    </section>
+
+    <!-- ═══ Web Users ═══ -->
+    <section class="view" id="view-webusers">
+      <div class="page-title">ผู้ใช้ทั้งหมดที่เคย Login</div>
+      <p class="page-sub">รายชื่อทุกคนที่เคยเข้าสู่ระบบด้วย Discord — แบน/ปลดแบนได้จากตรงนี้เลย</p>
+
+      <div class="card">
+        <div class="row" style="margin-bottom:14px;">
+          <input id="webUserSearch" type="text" placeholder="ค้นหาชื่อผู้ใช้หรือ Discord ID…" style="flex:1;min-width:220px;" />
+        </div>
+        <div id="webUsersWrap"><div class="loading">กำลังโหลด…</div></div>
+      </div>
+    </section>
+
+    <!-- ═══ IP Bans ═══ -->
+    <section class="view" id="view-ipbans">
+      <div class="page-title">แบนผู้ใช้ (IP)</div>
+      <p class="page-sub">แบนไอพีของเครื่องนั้นทิ้งเลย เครื่องที่โดนแบนจะเข้าเว็บนี้ไม่ได้อีกจนกว่าจะปลดแบน</p>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4Z"/><path d="M4.5 4.5l15 15"/></svg>
+          แบน IP ใหม่
+        </h3>
+        <div class="row">
+          <input id="banIpInput" type="text" placeholder="IP เช่น 203.0.113.42" style="min-width:200px;" />
+          <input id="banReasonInput" type="text" placeholder="เหตุผล (ไม่บังคับ)" style="flex:1;min-width:200px;" />
+          <button class="btn danger" id="banIpBtn">
+            <span class="btn-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4Z"/><path d="M4.5 4.5l15 15"/></svg></span>
+            แบนเลย
+          </button>
+        </div>
+        <p class="hint">ดู IP ผู้ใช้ได้จากล็อกกิจกรรมใน Discord (ทุกครั้งที่มีคนอัพเพลง/สมัครจะมี IP แนบมาด้วย) หรือขอจากผู้ใช้โดยตรง</p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><circle cx="3.5" cy="6" r="1"/><circle cx="3.5" cy="12" r="1"/><circle cx="3.5" cy="18" r="1"/></svg>
+          รายการ IP ที่แบนอยู่ <span class="n" id="ipBanCount"></span>
+        </h3>
+        <div id="ipBansWrap"><div class="loading">กำลังโหลด…</div></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4Z"/><path d="M4.5 4.5l15 15"/></svg>
+          แบนผู้ใช้ (Discord ID)
+        </h3>
+        <div class="row">
+          <input id="banUserIdInput" type="text" placeholder="Discord User ID" style="min-width:200px;" />
+          <input id="banUserReasonInput" type="text" placeholder="เหตุผล (ไม่บังคับ)" style="flex:1;min-width:200px;" />
+          <button class="btn danger" id="banUserBtn">
+            <span class="btn-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4Z"/><path d="M4.5 4.5l15 15"/></svg></span>
+            แบนเลย
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><circle cx="3.5" cy="6" r="1"/><circle cx="3.5" cy="12" r="1"/><circle cx="3.5" cy="18" r="1"/></svg>
+          ผู้ใช้ที่แบนอยู่ <span class="n" id="userBanCount"></span>
+        </h3>
+        <div id="userBansWrap"><div class="loading">กำลังโหลด…</div></div>
+      </div>
+    </section>
+
+    <!-- ═══ API Keys ═══ -->
+    <section class="view" id="view-keys">
+      <div class="page-title">
+        API Key
+        <span class="badge good online-pill" id="apiOnlineBadge">
+          <span class="pulse-dot"></span><span id="apiOnlineText">กำลังตรวจสอบ…</span>
+        </span>
+      </div>
+      <p class="page-sub">สร้างหรือเพิกถอนคีย์สำหรับให้บอท/เว็บภายนอกอ่านข้อมูลเพลง (<code>/api/public/songs</code>)</p>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+          สร้าง Key ใหม่
+        </h3>
+        <div class="row">
+          <input id="keyLabel" type="text" placeholder="ชื่อ/หมายเหตุ (เช่น 'บอทดิสคอร์ดตัวที่ 2')" style="flex:1;min-width:200px;" />
+          <input id="keyExpiry" type="number" min="0" placeholder="หมดอายุใน (วัน, เว้นว่าง=ไม่หมดอายุ)" style="width:230px;" />
+          <button class="btn accent" id="keyCreateBtn">
+            <span class="btn-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span>
+            สร้าง Key
+          </button>
+        </div>
+        <div id="newKeyBox"></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.6 12.4L20 3"/><path d="M16.2 6.8l2.6 2.6"/><path d="M13.4 9.6l2 2"/></svg>
+          Key ทั้งหมด <span class="n" id="keyCount"></span>
+        </h3>
+        <div id="keysWrap"><div class="loading">กำลังโหลด…</div></div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="modal-backdrop" id="dangerBackdrop">
+  <div class="modal">
+    <div class="m-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+    </div>
+    <h4 id="dangerTitle">ยืนยันการทำรายการ</h4>
+    <p id="dangerMessage"></p>
+    <input id="dangerInput" type="text" placeholder="" autocomplete="off" />
+    <p class="m-hint" id="dangerHint"></p>
+    <div class="m-actions">
+      <button class="btn ghost" id="dangerCancel">ยกเลิก</button>
+      <button class="btn danger" id="dangerConfirmBtn" disabled>ยืนยัน</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const $  = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+
+/* ── Icon set (no emoji anywhere in the UI) ────────────── */
+const ICONS = {
+  pencil: '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
+  trash:  '<path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/>',
+  check:  '<path d="M20 6L9 17l-5-5"/>',
+  plus:   '<path d="M12 5v14"/><path d="M5 12h14"/>',
+  minus:  '<path d="M5 12h14"/>',
+  shieldOff: '<path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4Z"/><path d="M4.5 4.5l15 15"/>',
+};
+function icon(name, size=15){
+  return `<svg class="ic" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]||""}</svg>`;
+}
+
+function esc(str){
+  return String(str ?? "").replace(/[&<>"']/g, (c) => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+  }[c]));
+}
+function fmtDate(iso){
+  if (!iso) return "-";
+  const d = new Date(iso);
+  if (isNaN(d)) return "-";
+  return d.toLocaleString("th-TH", { dateStyle:"medium", timeStyle:"short" });
+}
+function toast(msg, type="ok"){
+  const el = $("#toast");
+  const ic = type === "err"
+    ? '<path d="M12 8v5"/><path d="M12 16h.01"/><circle cx="12" cy="12" r="9"/>'
+    : '<path d="M20 6L9 17l-5-5"/>';
+  el.innerHTML = `<svg class="t-ic ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ic}</svg><span>${esc(msg)}</span>`;
+  el.className = "toast show " + type;
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => el.classList.remove("show"), 3200);
+}
+async function api(path, opts={}){
+  const res = await fetch(path, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    credentials: "same-origin",
+    ...opts,
+  });
+  let data = null;
+  try { data = await res.json(); } catch {}
+  if (!res.ok) {
+    const msg = (data && (data.error || data.message)) || `เกิดข้อผิดพลาด (${res.status})`;
+    throw new Error(msg);
+  }
+  return data;
+}
+
+/* ── Danger confirm modal (สำหรับ action เสี่ยงสูง) ───────
+   dangerConfirm({ title, message, matchText, hint, confirmLabel, onConfirm })
+   ผู้ใช้ต้องพิมพ์ matchText ให้ตรงเป๊ะก่อนปุ่มยืนยันจะกดได้ ───── */
+function dangerConfirm({ title, message, matchText, hint, confirmLabel = "ยืนยัน", onConfirm }){
+  const backdrop = $("#dangerBackdrop");
+  const input    = $("#dangerInput");
+  const confirmBtn = $("#dangerConfirmBtn");
+
+  $("#dangerTitle").textContent = title;
+  $("#dangerMessage").textContent = message;
+  $("#dangerHint").textContent = hint || `พิมพ์ "${matchText}" เพื่อยืนยัน`;
+  input.placeholder = matchText;
+  input.value = "";
+  confirmBtn.textContent = confirmLabel;
+  confirmBtn.disabled = true;
+  backdrop.classList.add("show");
+  setTimeout(() => input.focus(), 50);
+
+  function onInput(){ confirmBtn.disabled = input.value.trim() !== String(matchText); }
+  function close(){
+    backdrop.classList.remove("show");
+    input.removeEventListener("input", onInput);
+    confirmBtn.removeEventListener("click", onOk);
+    $("#dangerCancel").removeEventListener("click", close);
+  }
+  function onOk(){
+    if (input.value.trim() !== String(matchText)) return;
+    close();
+    onConfirm();
+  }
+  input.addEventListener("input", onInput);
+  confirmBtn.addEventListener("click", onOk);
+  $("#dangerCancel").addEventListener("click", close);
+}
+
+/* ── Lightweight inline SVG line chart (ไม่พึ่ง library ภายนอก) ─
+   renderLineChart(container, { labels: [...], series: [{name,color,data:[...]}] }) ───── */
+function renderLineChart(container, { labels, series }){
+  const W = 640, H = 200, padL = 30, padR = 10, padT = 14, padB = 24;
+  const allVals = series.flatMap(s => s.data);
+  const maxV = Math.max(1, ...allVals);
+  const n = labels.length;
+  if (!n) { container.innerHTML = `<div class="chart-empty">ยังไม่มีข้อมูลแนวโน้ม</div>`; return; }
+
+  const x = (i) => padL + (n === 1 ? 0 : (i * (W - padL - padR) / (n - 1)));
+  const y = (v) => H - padB - (v / maxV) * (H - padT - padB);
+
+  const gridLines = [0, .5, 1].map((f) => {
+    const gy = H - padB - f * (H - padT - padB);
+    return `<line x1="${padL}" y1="${gy}" x2="${W - padR}" y2="${gy}" stroke="var(--border-soft)" stroke-width="1"/>
+            <text x="${padL - 6}" y="${gy + 3}" text-anchor="end" font-size="9" fill="var(--faint)">${Math.round(maxV * f)}</text>`;
+  }).join("");
+
+  const step = Math.max(1, Math.ceil(n / 7));
+  const xLabels = labels.map((lb, i) => {
+    if (i % step !== 0 && i !== n - 1) return "";
+    const d = new Date(lb);
+    const txt = isNaN(d) ? lb : d.toLocaleDateString("th-TH", { day:"numeric", month:"short" });
+    return `<text x="${x(i)}" y="${H - 6}" text-anchor="middle" font-size="9" fill="var(--faint)">${txt}</text>`;
+  }).join("");
+
+  const seriesSvg = series.map((s) => {
+    const pts = s.data.map((v, i) => `${x(i)},${y(v)}`).join(" ");
+    const area = `${padL},${H - padB} ${pts} ${x(n - 1)},${H - padB}`;
+    const dots = s.data.map((v, i) => `
+      <g class="chart-pt">
+        <circle cx="${x(i)}" cy="${y(v)}" r="9" fill="transparent"/>
+        <circle class="chart-dot" cx="${x(i)}" cy="${y(v)}" r="3" fill="${s.color}"/>
+        <title>${labels[i]}: ${v}</title>
+      </g>`).join("");
+    return `
+      <polygon points="${area}" fill="${s.color}" opacity=".08"/>
+      <polyline points="${pts}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      ${dots}`;
+  }).join("");
+
+  container.innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+      ${gridLines}
+      ${seriesSvg}
+      ${xLabels}
+    </svg>`;
+}
+
+let trendDays = 14;
+async function loadTrends(days = trendDays){
+  trendDays = days;
+  $("#songsTrendChart").innerHTML = `<div class="loading">กำลังโหลด…</div>`;
+  $("#usersTrendChart").innerHTML = `<div class="loading">กำลังโหลด…</div>`;
+  try {
+    // API ที่ต้องมี: GET /api/admin/stats/trends?days=N
+    // → { days: ["2026-09-13", ...], songsAdded: [...], songsDeleted: [...], newUsers: [...] }
+    const data = await api(`/api/admin/stats/trends?days=${days}`);
+    const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    renderLineChart($("#songsTrendChart"), {
+      labels: data.days,
+      series: [
+        { name: "เพิ่ม", color: cssVar("--accent"), data: data.songsAdded },
+        { name: "ลบ", color: cssVar("--red"), data: data.songsDeleted },
+      ],
+    });
+    renderLineChart($("#usersTrendChart"), {
+      labels: data.days,
+      series: [{ name: "ผู้ใช้ใหม่", color: cssVar("--green"), data: data.newUsers }],
+    });
+  } catch (e) {
+    $("#songsTrendChart").innerHTML = `<div class="chart-empty">โหลดกราฟไม่สำเร็จ: ${esc(e.message)}</div>`;
+    $("#usersTrendChart").innerHTML = "";
+  }
+}
+$$("#trendRange button").forEach((b) => {
+  b.addEventListener("click", () => {
+    $$("#trendRange button").forEach((x) => x.classList.remove("active"));
+    b.classList.add("active");
+    loadTrends(Number(b.dataset.days));
+  });
+});
+
+/* ── Tab alert badges ──────────────────────────────────
+   API ที่ต้องมี: GET /api/admin/badge-counts
+   → { songs, roles, coins, cosmetics, webusers, ipbans, keys } (ตัวเลข, ไม่มี = 0)
+   แต่ละหน้าฝั่ง server กำหนดเองว่านับอะไรเป็น "ต้องดู" เช่น songs = เพลงที่บอทแจ้ง/ลบอัตโนมัติในชั่วโมงล่าสุด ───── */
+let badgePollTimer = null;
+async function loadBadgeCounts(){
+  try {
+    const data = await api("/api/admin/badge-counts");
+    Object.entries(data).forEach(([tab, count]) => {
+      const el = $("#badge-" + tab);
+      if (!el) return;
+      const n = Number(count) || 0;
+      el.textContent = n > 99 ? "99+" : n;
+      el.classList.toggle("show", n > 0);
+    });
+  } catch (e) { /* เงียบไว้ — ไม่ใช่ทุกเซิร์ฟเวอร์จะมี endpoint นี้ตั้งแต่แรก */ }
+}
+function startBadgePolling(){
+  clearInterval(badgePollTimer);
+  loadBadgeCounts();
+  badgePollTimer = setInterval(loadBadgeCounts, 45000);
+}
+
+/* ── Mobile drawer ────────────────────────────────────── */
+const sidebar = $("#sidebar");
+const backdrop = $("#drawerBackdrop");
+function openDrawer(){ sidebar.classList.add("open"); backdrop.classList.add("show"); }
+function closeDrawer(){ sidebar.classList.remove("open"); backdrop.classList.remove("show"); }
+$("#menuBtn").addEventListener("click", openDrawer);
+backdrop.addEventListener("click", closeDrawer);
+
+/* ── Tabs ─────────────────────────────────────────────── */
+$$(".tabs button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    $$(".tabs button").forEach((b) => b.classList.remove("active"));
+    $$(".view").forEach((v) => v.classList.remove("active"));
+    btn.classList.add("active");
+    $("#view-" + btn.dataset.tab).classList.add("active");
+    loadTab(btn.dataset.tab);
+    closeDrawer();
+  });
+});
+
+function loadTab(tab){
+  if (tab === "overview") loadOverview();
+  if (tab === "songs") { loadSongs(); clearTimeout(scanPollTimer); pollScanStatus(); }
+  if (tab === "roles")    loadRoles();
+  if (tab === "cosmetics") loadCosmetics();
+  if (tab === "webusers")  loadWebUsers();
+  if (tab === "ipbans")    { loadIpBans(); loadUserBans(); }
+  if (tab === "keys")     { loadKeys(); startApiOnlinePolling(); }
+  if (tab !== "keys")     stopApiOnlinePolling();
+  // "coins" tab ไม่ต้องโหลดอะไรล่วงหน้า — ทำงานแบบค้นหาตาม User ID ที่กรอกเอง
+}
+
+/* ── Overview ─────────────────────────────────────────── */
+async function loadOverview(){
+  loadTrends(trendDays);
+  try {
+    const data = await api("/api/admin/stats");
+    $("#statGrid").innerHTML = `
+      <div class="stat"><div class="num">${data.meta.totalSongs}</div><div class="lbl">เพลงทั้งหมด</div></div>
+      <div class="stat"><div class="num">${data.meta.totalAdded}</div><div class="lbl">เพิ่มสะสม</div></div>
+      <div class="stat"><div class="num">${data.meta.totalDeleted}</div><div class="lbl">ลบสะสม</div></div>
+      <div class="stat"><div class="num">${data.meta.totalUsers}</div><div class="lbl">ผู้ใช้ที่เคยส่งเพลง</div></div>
+      <div class="stat"><div class="num">${data.visitors}</div><div class="lbl">ผู้เข้าชมสะสม</div></div>
+    `;
+
+    $("#leaderboardWrap").innerHTML = data.leaderboard.length ? `
+      <table><thead><tr><th>#</th><th>ผู้ใช้</th><th>ส่งแล้ว</th><th>ลบไป</th></tr></thead>
+      <tbody>${data.leaderboard.map((u, i) => `
+        <tr><td>${i+1}</td><td>${esc(u.tag || u.userId)}</td><td>${u.sent}</td><td>${u.deleted || 0}</td></tr>
+      `).join("")}</tbody></table>
+    ` : `<div class="empty">ยังไม่มีข้อมูล</div>`;
+
+    $("#deletionsWrap").innerHTML = data.recentDeletions.length ? `
+      <table><thead><tr><th>เพลง</th><th>เหตุผล</th><th>เมื่อ</th></tr></thead>
+      <tbody>${data.recentDeletions.map((d) => `
+        <tr>
+          <td>${esc(d.name)}<div class="mono">${esc(d.id)}</div></td>
+          <td>${reasonBadge(d.reason)}</td>
+          <td>${fmtDate(d.deletedAt)}</td>
+        </tr>
+      `).join("")}</tbody></table>
+    ` : `<div class="empty">ยังไม่มีเพลงถูกลบ</div>`;
+  } catch (e) {
+    toast(e.message, "err");
+  }
+}
+function reasonBadge(reason){
+  const map = {
+    "auto-scan":  ["สแกนอัตโนมัติ", "warn"],
+    "user-check": ["ผู้ใช้ตรวจสอบ", "info"],
+    "bot-report": ["บอทแจ้ง", "info"],
+    "admin":      ["แอดมินลบ", "good"],
+  };
+  const [label, cls] = map[reason] || [reason || "ไม่ทราบ", "info"];
+  return `<span class="badge ${cls}">${esc(label)}</span>`;
+}
+
+/* ── Songs ────────────────────────────────────────────── */
+async function loadSongs(q=""){
+  $("#songsWrap").innerHTML = `<div class="loading">กำลังโหลด…</div>`;
+  try {
+    const data = await api("/api/admin/songs" + (q ? `?q=${encodeURIComponent(q)}` : ""));
+    if (!data.songs.length) {
+      $("#songsWrap").innerHTML = `<div class="empty">ไม่พบเพลง</div>`;
+      return;
+    }
+    $("#songsWrap").innerHTML = `
+      <table><thead><tr><th>เพลง</th><th>โหวต</th><th>ผู้เพิ่ม</th><th>เพิ่มเมื่อ</th><th></th></tr></thead>
+      <tbody>${data.songs.map((s) => `
+        <tr data-id="${esc(s.id)}">
+          <td><span class="song-name">${esc(s.name)}</span><div class="mono">${esc(s.id)}</div></td>
+          <td>${s.votes}</td>
+          <td>${esc(s.addedBy || "-")}</td>
+          <td>${fmtDate(s.addedAt)}</td>
+          <td class="row" style="gap:2px;justify-content:flex-end;flex-wrap:nowrap;">
+            <button class="icon rename-btn" title="แก้ชื่อ">${icon("pencil")}</button>
+            <button class="icon delete-btn" title="ลบ">${icon("trash")}</button>
+          </td>
+        </tr>
+      `).join("")}</tbody></table>
+    `;
+    $$(".rename-btn", $("#songsWrap")).forEach((b) => b.addEventListener("click", onRenameSong));
+    $$(".delete-btn", $("#songsWrap")).forEach((b) => b.addEventListener("click", onDeleteSong));
+  } catch (e) {
+    $("#songsWrap").innerHTML = `<div class="empty">โหลดไม่สำเร็จ: ${esc(e.message)}</div>`;
+  }
+}
+$("#songSearchBtn").addEventListener("click", () => loadSongs($("#songSearch").value.trim()));
+$("#songSearch").addEventListener("keydown", (e) => { if (e.key === "Enter") loadSongs(e.target.value.trim()); });
+
+async function onRenameSong(e){
+  const tr   = e.target.closest("tr");
+  const id   = tr.dataset.id;
+  const cur  = $(".song-name", tr).textContent;
+  const name = prompt("ชื่อเพลงใหม่:", cur);
+  if (name === null || !name.trim() || name.trim() === cur) return;
+  try {
+    await api(`/api/admin/songs/${encodeURIComponent(id)}`, { method: "PATCH", body: JSON.stringify({ name: name.trim() }) });
+    toast("แก้ไขชื่อเพลงแล้ว");
+    loadSongs($("#songSearch").value.trim());
+  } catch (err) { toast(err.message, "err"); }
+}
+async function onDeleteSong(e){
+  const tr = e.target.closest("tr");
+  const id = tr.dataset.id;
+  const name = $(".song-name", tr).textContent;
+  if (!confirm(`ลบเพลง "${name}" ออกจากระบบถาวร?`)) return;
+  try {
+    await api(`/api/admin/songs/${encodeURIComponent(id)}`, { method: "DELETE" });
+    toast("ลบเพลงแล้ว");
+    tr.remove();
+  } catch (err) { toast(err.message, "err"); }
+}
+
+/* ── Scan banned (ban-check) ──────────────────────────── */
+let scanPollTimer = null;
+
+function renderScanProgress(p){
+  const wrap = $("#scanProgressWrap");
+  if (!p || (!p.running && !p.total)) { wrap.style.display = "none"; return; }
+
+  wrap.style.display = "block";
+  const pct = p.total ? Math.round((p.checked / p.total) * 100) : 0;
+  $("#scanProgressBar").style.width = pct + "%";
+  $("#scanProgressCount").textContent = `${p.checked} / ${p.total}` + (p.deleted ? ` · ลบไป ${p.deleted}` : "");
+  $("#scanProgressLabel").textContent = p.running ? "กำลังสแกน…" : "สแกนเสร็จแล้ว";
+
+  const btn = $("#scanBtn");
+  btn.disabled = !!p.running;
+  btn.classList.toggle("is-busy", !!p.running);
+  $("#scanBtnLabel").textContent = p.running ? "กำลังสแกน…" : "สแกนตรวจแบนทั้งหมด";
+}
+
+async function pollScanStatus(){
+  try {
+    const p = await api("/api/admin/scan-banned/status");
+    renderScanProgress(p);
+
+    if (p.running) {
+      scanPollTimer = setTimeout(pollScanStatus, 1500);
+    } else {
+      clearTimeout(scanPollTimer);
+      if (p.finishedAt) {
+        toast(p.deleted > 0 ? `สแกนเสร็จ — ลบเพลงที่โดนแบนไป ${p.deleted} เพลง` : "สแกนเสร็จ — ไม่พบเพลงที่โดนแบน");
+        loadSongs($("#songSearch").value.trim()); // รีเฟรชตารางเพลงให้ตรงกับผลสแกนล่าสุด
+      }
+    }
+  } catch (e) {
+    clearTimeout(scanPollTimer);
+    toast("ตรวจสอบสถานะสแกนไม่สำเร็จ: " + e.message, "err");
+  }
+}
+
+$("#scanBtn").addEventListener("click", async () => {
+  try {
+    await api("/api/admin/scan-banned", { method: "POST" });
+    toast("เริ่มสแกนแล้ว…");
+    clearTimeout(scanPollTimer);
+    pollScanStatus();
+  } catch (e) {
+    toast(e.message, "err"); // เช่น 409 ถ้ามีสแกนอื่นรันอยู่แล้ว
+    clearTimeout(scanPollTimer);
+    pollScanStatus(); // ยังคง poll ต่อเพื่อโชว์ progress ของรอบที่รันอยู่ให้ดู
+  }
+});
+
+/* ── Roles / Shop ─────────────────────────────────────── */
+async function loadRoles(){
+  $("#rolesWrap").innerHTML = `<div class="loading">กำลังโหลด…</div>`;
+  $("#roleSelect").innerHTML = `<option>กำลังโหลดยศจากดิสคอร์ด…</option>`;
+  try {
+    const [shop, discordRoles] = await Promise.all([
+      api("/api/admin/roles"),
+      api("/api/admin/discord-roles"),
+    ]);
+
+    $("#roleCount").textContent = `(${shop.roles.length})`;
+    $("#rolesWrap").innerHTML = shop.roles.length ? `
+      <table><thead><tr><th>ยศ</th><th>ราคา</th><th></th></tr></thead>
+      <tbody>${shop.roles.map((r) => `
+        <tr data-id="${esc(r.id)}">
+          <td>${esc(r.name)}<div class="mono">${esc(r.id)}</div></td>
+          <td><span class="role-price">${r.price}</span> เหรียญ</td>
+          <td class="row" style="gap:2px;justify-content:flex-end;flex-wrap:nowrap;">
+            <button class="icon edit-price-btn" title="แก้ราคา">${icon("pencil")}</button>
+            <button class="icon remove-role-btn" title="ลบออกจากร้าน">${icon("trash")}</button>
+          </td>
+        </tr>
+      `).join("")}</tbody></table>
+    ` : `<div class="empty">ยังไม่มียศในร้าน</div>`;
+
+    $$(".edit-price-btn", $("#rolesWrap")).forEach((b) => b.addEventListener("click", onEditRolePrice));
+    $$(".remove-role-btn", $("#rolesWrap")).forEach((b) => b.addEventListener("click", onRemoveRole));
+
+    $("#roleSelect").innerHTML = discordRoles.roles.map((r) =>
+      `<option value="${esc(r.id)}" data-name="${esc(r.name)}">${esc(r.name)}${r.inShop ? " (อยู่ในร้านแล้ว)" : ""}</option>`
+    ).join("") || `<option value="">ไม่พบยศในเซิร์ฟเวอร์</option>`;
+  } catch (e) {
+    $("#rolesWrap").innerHTML = `<div class="empty">โหลดไม่สำเร็จ: ${esc(e.message)}</div>`;
+  }
+}
+$("#roleAddBtn").addEventListener("click", async () => {
+  const sel   = $("#roleSelect");
+  const opt   = sel.selectedOptions[0];
+  const price = $("#rolePrice").value;
+  if (!opt || !opt.value) return toast("กรุณาเลือกยศ", "err");
+  if (price === "" || Number(price) < 0) return toast("กรุณาระบุราคา", "err");
+  try {
+    await api("/api/admin/roles", {
+      method: "POST",
+      body: JSON.stringify({ roleId: opt.value, name: opt.dataset.name, price: Number(price) }),
+    });
+    toast("บันทึกยศลงร้านแล้ว");
+    $("#rolePrice").value = "";
+    loadRoles();
+  } catch (e) { toast(e.message, "err"); }
+});
+async function onEditRolePrice(e){
+  const tr = e.target.closest("tr");
+  const id = tr.dataset.id;
+  const name = tr.querySelector("td").childNodes[0].textContent;
+  const cur = $(".role-price", tr).textContent;
+  const price = prompt(`ราคาใหม่สำหรับ "${name}" (เหรียญ):`, cur);
+  if (price === null || price === "" || isNaN(Number(price)) || Number(price) < 0) return;
+  try {
+    await api("/api/admin/roles", { method: "POST", body: JSON.stringify({ roleId: id, name, price: Number(price) }) });
+    toast("แก้ราคาแล้ว");
+    loadRoles();
+  } catch (err) { toast(err.message, "err"); }
+}
+async function onRemoveRole(e){
+  const tr = e.target.closest("tr");
+  const id = tr.dataset.id;
+  if (!confirm("ลบยศนี้ออกจากร้าน? (ไม่กระทบยศจริงในดิสคอร์ด)")) return;
+  try {
+    await api(`/api/admin/roles/${encodeURIComponent(id)}`, { method: "DELETE" });
+    toast("ลบออกจากร้านแล้ว");
+    loadRoles();
+  } catch (err) { toast(err.message, "err"); }
+}
+
+/* ── Coins ──────────────────────────────────────────────
+   ค้นหา user ด้วย userId → โชว์ยอดเหรียญ → เพิ่ม/หักได้จากปุ่ม
+   ยิง API ที่ /api/admin/coins/:userId
+     GET  → { coins }
+     POST { amount, reason } → บวก(amount>0)/หัก(amount<0) แล้วคืน { coins, removed? }
+   ประวัติธุรกรรม ยิง API ที่:
+     GET /api/admin/coins/:userId/history
+     → { transactions: [ { id, amount, balanceAfter, reason, adminName, createdAt } ] }
+   หักเหรียญจำนวนมาก (>= DANGER_COIN_AMOUNT) ต้องพิมพ์ยืนยันซ้ำผ่าน dangerConfirm ──── */
+const DANGER_COIN_AMOUNT = 5000; // ปรับเกณฑ์ "จำนวนเยอะ" ได้ตรงนี้
+
+$("#coinLookupBtn").addEventListener("click", lookupCoinUser);
+$("#coinUserId").addEventListener("keydown", (e) => { if (e.key === "Enter") lookupCoinUser(); });
+
+async function lookupCoinUser(){
+  const userId = $("#coinUserId").value.trim();
+  if (!userId) return toast("กรุณากรอก User ID", "err");
+
+  $("#coinUserResult").innerHTML = `<div class="loading">กำลังโหลด…</div>`;
+  try {
+    const data = await api(`/api/admin/coins/${encodeURIComponent(userId)}`);
+    $("#coinUserResult").innerHTML = `
+      <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <div>
+          <div style="font-size:12px;color:var(--muted);">User ID</div>
+          <div class="mono" style="font-size:13px;">${esc(userId)}</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:12px;color:var(--muted);">เหรียญคงเหลือ</div>
+          <div style="font-size:26px;font-weight:750;letter-spacing:-.3px;">${Number(data.coins).toLocaleString("th-TH")}</div>
+        </div>
+      </div>
+      <div class="row">
+        <input id="coinAmount" type="number" min="1" placeholder="จำนวนเหรียญ" style="width:150px;" />
+        <input id="coinReason" type="text" placeholder="หมายเหตุ (ไม่บังคับ) เช่น รางวัลกิจกรรม" style="flex:1;min-width:200px;" />
+        <button class="btn accent" id="coinAddBtn">${icon("plus")}<span>เพิ่มเหรียญ</span></button>
+        <button class="btn danger" id="coinRemoveBtn">${icon("minus")}<span>หักเหรียญ</span></button>
+      </div>
+
+      <div class="coin-history-head">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v5h5"/><path d="M3.05 13a9 9 0 1 0 2.13-8.86L3 8"/><path d="M12 7v5l3 3"/></svg>
+        <span>ประวัติธุรกรรม</span>
+      </div>
+      <div id="coinHistoryWrap"><div class="loading">กำลังโหลด…</div></div>
+    `;
+    $("#coinAddBtn").addEventListener("click", () => adjustCoin(userId, 1));
+    $("#coinRemoveBtn").addEventListener("click", () => adjustCoin(userId, -1));
+    loadCoinHistory(userId);
+  } catch (e) {
+    $("#coinUserResult").innerHTML = `<div class="empty">โหลดไม่สำเร็จ: ${esc(e.message)}</div>`;
+  }
+}
+
+async function loadCoinHistory(userId){
+  const wrap = $("#coinHistoryWrap");
+  if (!wrap) return;
+  wrap.innerHTML = `<div class="loading">กำลังโหลด…</div>`;
+  try {
+    const data = await api(`/api/admin/coins/${encodeURIComponent(userId)}/history`);
+    const tx = data.transactions || [];
+    wrap.innerHTML = tx.length ? `
+      <table><thead><tr><th>เมื่อ</th><th>จำนวน</th><th>คงเหลือหลังทำ</th><th>โดย</th><th>หมายเหตุ</th></tr></thead>
+      <tbody>${tx.map((t) => `
+        <tr>
+          <td>${fmtDate(t.createdAt)}</td>
+          <td class="${t.amount >= 0 ? "amt-pos" : "amt-neg"}">${t.amount >= 0 ? "+" : ""}${Number(t.amount).toLocaleString("th-TH")}</td>
+          <td>${t.balanceAfter != null ? Number(t.balanceAfter).toLocaleString("th-TH") : "-"}</td>
+          <td>${esc(t.adminName || "ระบบ")}</td>
+          <td>${esc(t.reason || "-")}</td>
+        </tr>
+      `).join("")}</tbody></table>
+    ` : `<div class="empty">ยังไม่มีประวัติธุรกรรม</div>`;
+  } catch (e) {
+    wrap.innerHTML = `<div class="empty">โหลดประวัติไม่สำเร็จ: ${esc(e.message)}</div>`;
+  }
+}
+
+async function adjustCoin(userId, sign){
+  const raw    = $("#coinAmount").value;
+  const amount = Number(raw);
+  const reason = $("#coinReason").value.trim();
+  if (!raw || isNaN(amount) || amount <= 0) return toast("กรุณาระบุจำนวนเหรียญที่ถูกต้อง (มากกว่า 0)", "err");
+
+  const doAdjust = async () => {
+    try {
+      await api(`/api/admin/coins/${encodeURIComponent(userId)}`, {
+        method: "POST",
+        body: JSON.stringify({ amount: sign < 0 ? -amount : amount, reason }),
+      });
+      toast(sign < 0 ? `หักเหรียญ ${amount.toLocaleString("th-TH")} แล้ว` : `เพิ่มเหรียญ ${amount.toLocaleString("th-TH")} แล้ว`);
+      $("#coinAmount").value = "";
+      $("#coinReason").value = "";
+      lookupCoinUser(); // รีโหลดยอดและประวัติล่าสุด
+    } catch (e) { toast(e.message, "err"); }
+  };
+
+  if (sign < 0 && amount >= DANGER_COIN_AMOUNT) {
+    dangerConfirm({
+      title: "หักเหรียญจำนวนมาก",
+      message: `กำลังจะหักเหรียญ ${amount.toLocaleString("th-TH")} เหรียญ จากผู้ใช้ ${userId} — การกระทำนี้ย้อนกลับไม่ได้`,
+      matchText: String(amount),
+      confirmLabel: "ยืนยันหักเหรียญ",
+      onConfirm: doAdjust,
+    });
+    return;
+  }
+
+  if (sign < 0 && !confirm(`ยืนยันหักเหรียญ ${amount.toLocaleString("th-TH")} จากผู้ใช้นี้?`)) return;
+  doAdjust();
+}
+
+/* ── Cosmetics (ธีมสี / กรอบโปรไฟล์) ───────────────────── */
+let cosmeticCatalogCache = [];
+
+function fmtCosmeticPrice(item){
+  if (item.onSale) {
+    return `<span style="text-decoration:line-through;color:var(--faint);font-size:11.5px;">${item.basePrice}</span> `
+         + `<span style="color:var(--red);font-weight:750;">${item.price}</span> เหรียญ `
+         + `<span class="badge warn">ลดราคา ถึง ${fmtDate(item.saleUntil)}</span>`;
+  }
+  return `${item.price} เหรียญ`;
+}
+
+async function loadCosmetics(){
+  $("#cosmeticsWrap").innerHTML = `<div class="loading">กำลังโหลด…</div>`;
+  $("#cosmeticSaleSelect").innerHTML = `<option>กำลังโหลด…</option>`;
+  try {
+    const data = await api("/api/admin/cosmetics");
+    cosmeticCatalogCache = data.catalog;
+
+    $("#cosmeticCount").textContent = `(${cosmeticCatalogCache.length})`;
+    // รูป preview: ใช้ field previewUrl (หรือ image) จากแคตตาล็อก — ถ้าไม่มี/โหลดพัง จะโชว์กรอบเปล่าแทน
+    $("#cosmeticsWrap").innerHTML = cosmeticCatalogCache.length ? `
+      <table><thead><tr><th>รูป</th><th>ไอเทม</th><th>ประเภท</th><th>ราคา</th><th></th></tr></thead>
+      <tbody>${cosmeticCatalogCache.map((c) => {
+        const img = c.previewUrl || c.image || "";
+        const thumbHtml = img
+          ? `<img class="cosmetic-thumb" src="${esc(img)}" alt="" loading="lazy" onerror="this.outerHTML='&lt;div class=&quot;cosmetic-thumb-ph&quot;&gt;&lt;/div&gt;'">`
+          : `<div class="cosmetic-thumb-ph"></div>`;
+        return `
+        <tr data-id="${esc(c.id)}">
+          <td>${thumbHtml}</td>
+          <td>${esc(c.name)}<div class="mono">${esc(c.id)}</div></td>
+          <td>${c.type === "theme" ? "ธีมสี" : "กรอบรูป"}</td>
+          <td class="cosmetic-price">${fmtCosmeticPrice(c)}</td>
+          <td class="row" style="gap:2px;justify-content:flex-end;flex-wrap:nowrap;">
+            <button class="icon edit-cosmetic-price-btn" title="แก้ราคาปกติ">${icon("pencil")}</button>
+            ${c.onSale ? `<button class="icon clear-cosmetic-sale-btn" title="ยกเลิกโปรโมชั่น">${icon("trash")}</button>` : ""}
+          </td>
+        </tr>
+      `;
+      }).join("")}</tbody></table>
+    ` : `<div class="empty">ไม่พบไอเทมในแคตตาล็อก</div>`;
+
+    $$(".edit-cosmetic-price-btn", $("#cosmeticsWrap")).forEach((b) => b.addEventListener("click", onEditCosmeticPrice));
+    $$(".clear-cosmetic-sale-btn", $("#cosmeticsWrap")).forEach((b) => b.addEventListener("click", onClearCosmeticSale));
+
+    $("#cosmeticSaleSelect").innerHTML = cosmeticCatalogCache.map((c) =>
+      `<option value="${esc(c.id)}">${esc(c.name)} (${c.type === "theme" ? "ธีม" : "กรอบ"}) — ปกติ ${c.basePrice} เหรียญ</option>`
+    ).join("") || `<option value="">ไม่มีไอเทม</option>`;
+  } catch (e) {
+    $("#cosmeticsWrap").innerHTML = `<div class="empty">โหลดไม่สำเร็จ: ${esc(e.message)}</div>`;
+  }
+}
+
+async function onEditCosmeticPrice(e){
+  const tr   = e.target.closest("tr");
+  const id   = tr.dataset.id;
+  const item = cosmeticCatalogCache.find((c) => c.id === id);
+  const name = item ? item.name : "ไอเทมนี้";
+  const price = prompt(`ราคาปกติใหม่สำหรับ "${name}" (เหรียญ):`, item ? item.basePrice : "");
+  if (price === null || price === "" || isNaN(Number(price)) || Number(price) < 0) return;
+  try {
+    await api(`/api/admin/cosmetics/${encodeURIComponent(id)}/price`, {
+      method: "POST",
+      body: JSON.stringify({ price: Number(price) }),
+    });
+    toast("แก้ราคาแล้ว");
+    loadCosmetics();
+  } catch (err) { toast(err.message, "err"); }
+}
+
+async function onClearCosmeticSale(e){
+  const tr = e.target.closest("tr");
+  const id = tr.dataset.id;
+  if (!confirm("ยกเลิกโปรโมชั่นลดราคานี้ตอนนี้เลย? ราคาจะกลับเป็นปกติทันที")) return;
+  try {
+    await api(`/api/admin/cosmetics/${encodeURIComponent(id)}/sale`, { method: "DELETE" });
+    toast("ยกเลิกโปรโมชั่นแล้ว");
+    loadCosmetics();
+  } catch (err) { toast(err.message, "err"); }
+}
+
+$("#cosmeticSaleBtn").addEventListener("click", async () => {
+  const sel        = $("#cosmeticSaleSelect");
+  const id         = sel.value;
+  const salePrice  = $("#cosmeticSalePrice").value;
+  const saleUntil  = $("#cosmeticSaleUntil").value; // datetime-local เป็นเวลาโซนเครื่องผู้ใช้อยู่แล้ว, new Date() ฝั่ง server แปลงตรงได้เลย
+  if (!id) return toast("กรุณาเลือกไอเทม", "err");
+  if (salePrice === "" || Number(salePrice) < 0) return toast("กรุณาระบุราคาลด", "err");
+  if (!saleUntil) return toast("กรุณาระบุวัน-เวลาที่จะหมดโปรโมชั่น", "err");
+  try {
+    await api(`/api/admin/cosmetics/${encodeURIComponent(id)}/sale`, {
+      method: "POST",
+      body: JSON.stringify({ salePrice: Number(salePrice), saleUntil: new Date(saleUntil).toISOString() }),
+    });
+    toast("ตั้งลดราคาแล้ว");
+    $("#cosmeticSalePrice").value = "";
+    $("#cosmeticSaleUntil").value = "";
+    loadCosmetics();
+  } catch (e) { toast(e.message, "err"); }
+});
+
+/* ── ผู้ใช้ทั้งหมดที่เคย Login ─────────────────────────── */
+let webUsersCache = [];
+
+function renderWebUsers(list){
+  $("#webUsersWrap").innerHTML = list.length ? `
+    <table><thead><tr><th>ผู้ใช้</th><th>Discord ID</th><th>Login ล่าสุด</th><th>สถานะ</th><th></th></tr></thead>
+    <tbody>${list.map((u) => `
+      <tr data-id="${esc(u.id)}">
+        <td class="user-cell">${u.avatar ? `<img class="avatar-sm" src="${esc(u.avatar)}">` : ""}${esc(u.username)}</td>
+        <td class="mono">${esc(u.id)}</td>
+        <td>${fmtDate(new Date(u.updatedAt).toISOString())}</td>
+        <td>${u.banned ? `<span class="badge danger">ถูกแบน</span>` : '<span class="badge good">ปกติ</span>'}</td>
+        <td class="row" style="justify-content:flex-end;flex-wrap:nowrap;">
+          ${u.banned
+            ? `<button class="btn ghost unban-webuser-btn" style="padding:7px 12px;">${icon("check")}<span>ปลดแบน</span></button>`
+            : `<button class="btn danger ban-webuser-btn" style="padding:7px 12px;">${icon("shieldOff")}<span>แบน</span></button>`}
+        </td>
+      </tr>
+    `).join("")}</tbody></table>
+  ` : `<div class="empty">ไม่พบผู้ใช้</div>`;
+  $$(".ban-webuser-btn", $("#webUsersWrap")).forEach((b) => b.addEventListener("click", onBanWebUser));
+  $$(".unban-webuser-btn", $("#webUsersWrap")).forEach((b) => b.addEventListener("click", onUnbanWebUser));
+}
+
+async function loadWebUsers(){
+  $("#webUsersWrap").innerHTML = `<div class="loading">กำลังโหลด…</div>`;
+  try {
+    const data = await api("/api/admin/web-users");
+    webUsersCache = data.users;
+    renderWebUsers(webUsersCache);
+  } catch (e) {
+    $("#webUsersWrap").innerHTML = `<div class="empty">โหลดไม่สำเร็จ: ${esc(e.message)}</div>`;
+  }
+}
+
+$("#webUserSearch").addEventListener("input", (e) => {
+  const q = e.target.value.trim().toLowerCase();
+  renderWebUsers(!q ? webUsersCache : webUsersCache.filter((u) =>
+    u.username.toLowerCase().includes(q) || u.id.includes(q)
+  ));
+});
+
+async function onBanWebUser(e){
+  const tr = e.target.closest("tr");
+  const id = tr.dataset.id;
+  const reason = prompt("เหตุผลที่แบน (ไม่บังคับ):", "") || "";
+  if (!confirm(`แบนผู้ใช้นี้เลยใช่ไหม? เข้าเว็บด้วยบัญชีนี้ไม่ได้ทันที`)) return;
+  try {
+    await api("/api/admin/user-bans", { method: "POST", body: JSON.stringify({ userId: id, reason }) });
+    toast("แบนผู้ใช้แล้ว");
+    loadWebUsers();
+  } catch (err) { toast(err.message, "err"); }
+}
+async function onUnbanWebUser(e){
+  const tr = e.target.closest("tr");
+  const id = tr.dataset.id;
+  if (!confirm("ปลดแบนผู้ใช้นี้?")) return;
+  try {
+    await api(`/api/admin/user-bans/${encodeURIComponent(id)}`, { method: "DELETE" });
+    toast("ปลดแบนแล้ว");
+    loadWebUsers();
+  } catch (err) { toast(err.message, "err"); }
+}
+
+/* ── IP Bans ──────────────────────────────────────────── */
+async function loadIpBans(){
+  $("#ipBansWrap").innerHTML = `<div class="loading">กำลังโหลด…</div>`;
+  try {
+    const data = await api("/api/admin/ip-bans");
+    $("#ipBanCount").textContent = `(${data.bans.length})`;
+    $("#ipBansWrap").innerHTML = data.bans.length ? `
+      <table><thead><tr><th>IP</th><th>เหตุผล</th><th>แบนโดย</th><th>แบนเมื่อ</th><th></th></tr></thead>
+      <tbody>${data.bans.map((b) => `
+        <tr data-ip="${esc(b.ip)}">
+          <td class="mono">${esc(b.ip)}</td>
+          <td>${esc(b.reason || "-")}</td>
+          <td>${esc(b.bannedBy || "-")}</td>
+          <td>${fmtDate(b.bannedAt)}</td>
+          <td class="row" style="justify-content:flex-end;">
+            <button class="icon unban-btn" title="ปลดแบน">${icon("check")}</button>
+          </td>
+        </tr>
+      `).join("")}</tbody></table>
+    ` : `<div class="empty">ยังไม่มี IP ที่ถูกแบน</div>`;
+    $$(".unban-btn", $("#ipBansWrap")).forEach((b) => b.addEventListener("click", onUnbanIp));
+  } catch (e) {
+    $("#ipBansWrap").innerHTML = `<div class="empty">โหลดไม่สำเร็จ: ${esc(e.message)}</div>`;
+  }
+}
+
+$("#banIpBtn").addEventListener("click", async () => {
+  const ip     = $("#banIpInput").value.trim();
+  const reason = $("#banReasonInput").value.trim();
+  if (!ip) return toast("กรุณาระบุ IP", "err");
+  if (!confirm(`แบน IP "${ip}" เลยใช่ไหม? เครื่องนี้จะเข้าเว็บไม่ได้ทันที`)) return;
+  try {
+    await api("/api/admin/ip-bans", { method: "POST", body: JSON.stringify({ ip, reason }) });
+    toast("แบน IP แล้ว");
+    $("#banIpInput").value = "";
+    $("#banReasonInput").value = "";
+    loadIpBans();
+  } catch (e) { toast(e.message, "err"); }
+});
+
+async function onUnbanIp(e){
+  const tr = e.target.closest("tr");
+  const ip = tr.dataset.ip;
+  if (!confirm(`ปลดแบน IP "${ip}"?`)) return;
+  try {
+    await api(`/api/admin/ip-bans/${encodeURIComponent(ip)}`, { method: "DELETE" });
+    toast("ปลดแบนแล้ว");
+    tr.remove();
+  } catch (err) { toast(err.message, "err"); }
+}
+
+async function loadUserBans(){
+  $("#userBansWrap").innerHTML = `<div class="loading">กำลังโหลด…</div>`;
+  try {
+    const data = await api("/api/admin/user-bans");
+    $("#userBanCount").textContent = `(${data.bans.length})`;
+    $("#userBansWrap").innerHTML = data.bans.length ? `
+      <table><thead><tr><th>Discord ID</th><th>เหตุผล</th><th>แบนโดย</th><th>แบนเมื่อ</th><th></th></tr></thead>
+      <tbody>${data.bans.map((b) => `
+        <tr data-id="${esc(b.userId)}">
+          <td class="mono">${esc(b.userId)}</td>
+          <td>${esc(b.reason || "-")}</td>
+          <td>${esc(b.bannedBy || "-")}</td>
+          <td>${fmtDate(b.bannedAt)}</td>
+          <td class="row" style="justify-content:flex-end;">
+            <button class="icon unban-user-btn" title="ปลดแบน">${icon("check")}</button>
+          </td>
+        </tr>
+      `).join("")}</tbody></table>
+    ` : `<div class="empty">ยังไม่มีผู้ใช้ที่ถูกแบน</div>`;
+    $$(".unban-user-btn", $("#userBansWrap")).forEach((b) => b.addEventListener("click", onUnbanUser));
+  } catch (e) {
+    $("#userBansWrap").innerHTML = `<div class="empty">โหลดไม่สำเร็จ: ${esc(e.message)}</div>`;
+  }
+}
+
+$("#banUserBtn").addEventListener("click", async () => {
+  const userId = $("#banUserIdInput").value.trim();
+  const reason = $("#banUserReasonInput").value.trim();
+  if (!userId) return toast("กรุณาระบุ Discord ID", "err");
+  if (!confirm(`แบนผู้ใช้ ID "${userId}" เลยใช่ไหม? เข้าเว็บด้วยบัญชีนี้ไม่ได้ทันที`)) return;
+  try {
+    await api("/api/admin/user-bans", { method: "POST", body: JSON.stringify({ userId, reason }) });
+    toast("แบนผู้ใช้แล้ว");
+    $("#banUserIdInput").value = "";
+    $("#banUserReasonInput").value = "";
+    loadUserBans();
+  } catch (e) { toast(e.message, "err"); }
+});
+
+async function onUnbanUser(e){
+  const tr = e.target.closest("tr");
+  const id = tr.dataset.id;
+  if (!confirm(`ปลดแบนผู้ใช้ ID "${id}"?`)) return;
+  try {
+    await api(`/api/admin/user-bans/${encodeURIComponent(id)}`, { method: "DELETE" });
+    toast("ปลดแบนแล้ว");
+    tr.remove();
+  } catch (err) { toast(err.message, "err"); }
+}
+
+/* ── API Keys ─────────────────────────────────────────── */
+let apiOnlinePollTimer = null;
+async function loadApiOnline(){
+  try {
+    const data = await api("/api/admin/api-online");
+    $("#apiOnlineText").textContent = `ใช้งานอยู่ตอนนี้ ${data.online} คน (รวมทุกคีย์)`;
+    $$(".key-online").forEach((el) => {
+      const id    = el.id.replace("online-", "");
+      const count = (data.byKey && data.byKey[id]) || 0;
+      el.textContent = `${count} คน`;
+      el.className   = "badge key-online " + (count > 0 ? "good" : "info");
+    });
+  } catch (e) { /* เงียบไว้ ไม่ toast รบกวนตอน poll เบื้องหลัง */ }
+}
+function startApiOnlinePolling(){
+  clearInterval(apiOnlinePollTimer);
+  loadApiOnline();
+  apiOnlinePollTimer = setInterval(loadApiOnline, 5000); // อัปเดตทุก 5 วิ
+}
+function stopApiOnlinePolling(){
+  clearInterval(apiOnlinePollTimer);
+}
+
+async function loadKeys(){
+  $("#keysWrap").innerHTML = `<div class="loading">กำลังโหลด…</div>`;
+  try {
+    const data = await api("/api/admin/api-keys");
+    $("#keyCount").textContent = `(${data.keys.length})`;
+    $("#keysWrap").innerHTML = data.keys.length ? `
+      <table><thead><tr><th>ชื่อ</th><th>สร้างเมื่อ</th><th>หมดอายุ</th><th>ออนไลน์ตอนนี้</th><th></th></tr></thead>
+      <tbody>${data.keys.map((k) => `
+        <tr data-id="${esc(k.id)}">
+          <td>${esc(k.label || "(ไม่มีชื่อ)")}</td>
+          <td>${fmtDate(k.createdAt)}</td>
+          <td>${k.expiresAt ? fmtDate(k.expiresAt) : '<span class="badge good">ไม่หมดอายุ</span>'}</td>
+          <td><span class="badge info key-online" id="online-${esc(k.id)}">– คน</span></td>
+          <td class="row" style="justify-content:flex-end;"><button class="icon revoke-btn" title="เพิกถอน">${icon("trash")}</button></td>
+        </tr>
+      `).join("")}</tbody></table>
+    ` : `<div class="empty">ยังไม่มี API key</div>`;
+    $$(".revoke-btn", $("#keysWrap")).forEach((b) => b.addEventListener("click", onRevokeKey));
+    loadApiOnline(); // เติมตัวเลขออนไลน์ให้แต่ละแถวทันทีหลังตารางเรนเดอร์เสร็จ
+  } catch (e) {
+    $("#keysWrap").innerHTML = `<div class="empty">โหลดไม่สำเร็จ: ${esc(e.message)}</div>`;
+  }
+}
+$("#keyCreateBtn").addEventListener("click", async () => {
+  const label = $("#keyLabel").value.trim();
+  const days  = $("#keyExpiry").value;
+  try {
+    const result = await api("/api/admin/api-keys", {
+      method: "POST",
+      body: JSON.stringify({ label, expiresInDays: days ? Number(days) : undefined }),
+    });
+    $("#newKeyBox").innerHTML = `
+      <div class="newkey">
+        <div class="newkey-head">${icon("check")}<span>สร้างสำเร็จ — คัดลอกเก็บไว้ตอนนี้เลย จะไม่แสดงซ้ำอีก</span></div>
+        <code>${esc(result.key)}</code>
+      </div>`;
+    $("#keyLabel").value = "";
+    $("#keyExpiry").value = "";
+    loadKeys();
+  } catch (e) { toast(e.message, "err"); }
+});
+async function onRevokeKey(e){
+  const tr = e.target.closest("tr");
+  const id = tr.dataset.id;
+  const label = tr.querySelector("td").textContent.trim() || id;
+
+  const doRevoke = async () => {
+    try {
+      await api(`/api/admin/api-keys/${encodeURIComponent(id)}`, { method: "DELETE" });
+      toast("เพิกถอนแล้ว");
+      tr.remove();
+    } catch (err) { toast(err.message, "err"); }
+  };
+
+  const onlineEl = $("#online-" + id);
+  const onlineCount = onlineEl ? parseInt(onlineEl.textContent, 10) || 0 : 0;
+
+  if (onlineCount > 0) {
+    dangerConfirm({
+      title: "คีย์นี้มีคนใช้งานอยู่",
+      message: `"${label}" มีผู้ใช้งานออนไลน์อยู่ตอนนี้ ${onlineCount} คน — เพิกถอนตอนนี้จะตัดการเชื่อมต่อทันที`,
+      matchText: "REVOKE",
+      confirmLabel: "เพิกถอนคีย์",
+      onConfirm: doRevoke,
+    });
+    return;
+  }
+
+  if (!confirm("เพิกถอน API key นี้? โปรแกรมที่ใช้คีย์นี้อยู่จะใช้งานไม่ได้ทันที")) return;
+  doRevoke();
+}
+
+/* ── Init ─────────────────────────────────────────────── */
+loadOverview();
+startBadgePolling();
+</script>
+</body>
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+<title>โปรไฟล์ — SONG-ID</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700;800&family=Kanit:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:linear-gradient(180deg,#f8f6fd 0%,#efe7fb 100%);
+  --surface:#ffffff;--surface2:#faf8ff;
+  --border:rgba(124,58,237,.12);--border2:rgba(124,58,237,.20);
+  --accent:#7c3aed;--accent2:#9333ea;--accent3:#6d28d9;
+  --accent-glow:rgba(124,58,237,.25);
+  --pink:#ec4899;--green:#16a34a;--yellow:#d97706;--red:#dc2626;
+  --text:#241a3d;--muted:#c7bce3;--muted2:#8b7aa8;--muted3:#5c4a80;
+  --sans:'IBM Plex Sans Thai',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --display:'Kanit',-apple-system,BlinkMacSystemFont,sans-serif;
+  --r:16px;--r2:10px;
+  --shadow-sm:0 2px 10px rgba(124,58,237,.08);
+  --shadow-md:0 10px 28px rgba(124,58,237,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;min-height:100vh}
+
+nav{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,.65));
+  backdrop-filter:blur(18px) saturate(200%);-webkit-backdrop-filter:blur(18px) saturate(200%);
+  border-bottom:1px solid rgba(255,255,255,.5);padding:12px 20px;display:flex;align-items:center;gap:10px}
+nav a.back{display:flex;align-items:center;gap:6px;color:var(--accent3);text-decoration:none;font-weight:700;font-size:13px}
+nav a.back svg{flex-shrink:0}
+nav .logo{margin-left:auto;font-family:var(--display);font-weight:800;color:var(--accent3);font-size:15px;letter-spacing:.3px}
+
+.wrap{max-width:640px;margin:0 auto;padding:0 18px 60px}
+
+#loading,#not-found{text-align:center;padding:80px 20px;color:var(--muted3)}
+#not-found svg{margin-bottom:14px;color:var(--muted)}
+#not-found h2{font-family:var(--display);font-size:18px;margin-bottom:6px;color:var(--text)}
+#not-found a{color:var(--accent3);font-weight:700;text-decoration:none}
+
+.profile-header{text-align:center;padding:36px 10px 20px}
+.avatar-fx.big{width:92px;height:92px}
+.avatar-fx.big img{width:92px;height:92px;object-fit:cover}
+.profile-username{font-family:var(--display);font-weight:800;font-size:20px;margin-top:16px;color:var(--text)}
+.profile-bio{color:var(--muted3);font-size:13px;margin-top:6px;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.6;white-space:pre-wrap}
+.profile-bio.empty{color:var(--muted);font-style:italic}
+
+.profile-stats{display:flex;justify-content:center;align-items:stretch;gap:0;margin-top:18px;max-width:340px;margin-left:auto;margin-right:auto}
+.ps-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:0 8px;position:relative}
+.ps-item+.ps-item::before{content:'';position:absolute;left:0;top:15%;bottom:15%;width:1px;background:var(--border)}
+.ps-num{font-family:var(--display);font-weight:800;font-size:16px;color:var(--text)}
+.ps-label{font-size:10.5px;color:var(--muted2)}
+
+.follow-btn{margin-top:14px;border:none;font-weight:700;font-size:12.5px;padding:9px 26px;border-radius:999px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:6px;transition:all .15s}
+.follow-btn.state-follow{background:linear-gradient(135deg,var(--accent),var(--accent3));color:#fff;box-shadow:0 6px 16px -4px var(--accent-glow)}
+.follow-btn.state-following{background:var(--surface);border:1px solid var(--border2);color:var(--muted3)}
+.follow-btn.state-following:hover{border-color:var(--red);color:var(--red)}
+.follow-btn:disabled{opacity:.6;cursor:not-allowed}
+
+/* ═══ Bottom sheet: รายชื่อผู้ติดตาม / กำลังติดตาม (คลิกเลขในแถบสถิติเพื่อเปิด) ═══ */
+.ps-item.clickable{cursor:pointer}
+.ps-item.clickable:hover .ps-num{color:var(--accent3)}
+.fl-overlay{position:fixed;inset:0;background:rgba(20,12,35,.4);backdrop-filter:blur(4px);z-index:900;
+  opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.fl-overlay.open{opacity:1;visibility:visible}
+.fl-sheet{position:fixed;left:0;right:0;bottom:0;z-index:901;background:var(--surface);
+  border-radius:22px 22px 0 0;max-width:640px;margin:0 auto;max-height:78vh;display:flex;flex-direction:column;
+  box-shadow:0 -10px 40px rgba(124,58,237,.25);
+  transform:translateY(100%);transition:transform .3s cubic-bezier(.34,1.2,.4,1)}
+.fl-overlay.open .fl-sheet{transform:translateY(0)}
+.fl-handle{width:36px;height:4px;border-radius:3px;background:var(--border2);margin:10px auto 4px;flex-shrink:0}
+.fl-tabs{display:flex;gap:4px;padding:10px 16px 0;flex-shrink:0}
+.fl-tab{flex:1;text-align:center;padding:10px 6px;font-size:13px;font-weight:700;color:var(--muted2);
+  border:none;background:none;border-bottom:2.5px solid transparent;cursor:pointer}
+.fl-tab.on{color:var(--accent3);border-bottom-color:var(--accent3)}
+.fl-close{position:absolute;top:10px;right:14px;width:28px;height:28px;border-radius:50%;border:none;
+  background:var(--surface2);color:var(--muted3);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px}
+.fl-list{overflow-y:auto;padding:6px 10px 20px;flex:1}
+.fl-row{display:flex;align-items:center;gap:12px;padding:10px 8px;border-radius:14px;text-decoration:none;color:var(--text);
+  transition:background .15s}
+.fl-row:hover{background:var(--surface2)}
+.fl-row img{width:42px;height:42px;border-radius:50%;object-fit:cover;flex-shrink:0;background:var(--surface2)}
+.fl-row-name{font-weight:700;font-size:13.5px}
+.fl-empty,.fl-loading{text-align:center;color:var(--muted2);font-size:12.5px;padding:36px 20px}
+
+.edit-profile-btn{margin-top:16px;background:var(--surface);border:1px solid var(--border2);color:var(--accent3);
+  font-weight:700;font-size:12.5px;padding:8px 18px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+  box-shadow:var(--shadow-sm);transition:all .15s}
+.edit-profile-btn:hover{border-color:var(--accent);background:var(--surface2)}
+
+.edit-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:20px;margin-top:18px;
+  box-shadow:var(--shadow-md)}
+.edit-panel label{display:block;font-size:12px;font-weight:700;color:var(--muted3);margin-bottom:6px}
+.edit-panel textarea{width:100%;border:1px solid var(--border2);border-radius:var(--r2);padding:10px 12px;font-family:var(--sans);
+  font-size:13px;color:var(--text);resize:none;min-height:64px;background:var(--surface2)}
+.edit-panel textarea:focus{outline:none;border-color:var(--accent)}
+.char-count{text-align:right;font-size:10.5px;color:var(--muted2);margin-top:4px}
+.save-bio-btn{margin-top:10px;background:linear-gradient(135deg,var(--accent),var(--accent3));color:#fff;border:none;
+  padding:9px 20px;border-radius:999px;font-weight:700;font-size:12.5px;cursor:pointer;box-shadow:0 6px 16px -4px var(--accent-glow)}
+.save-bio-btn:disabled{opacity:.5;cursor:not-allowed}
+.edit-divider{height:1px;background:var(--border);margin:18px 0}
+.frame-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:12px;margin-top:10px}
+.frame-pick{background:var(--surface2);border:1.5px solid var(--border);border-radius:14px;padding:10px 6px 8px;
+  display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;transition:all .15s}
+.frame-pick:hover{border-color:var(--accent2)}
+.frame-pick.equipped{border-color:var(--accent);background:rgba(124,58,237,.06)}
+.frame-pick .fp-name{font-size:9.5px;font-weight:700;color:var(--muted3);text-align:center;line-height:1.3}
+.frame-pick.equipped .fp-name{color:var(--accent3)}
+.frame-empty-note{font-size:12px;color:var(--muted2);text-align:center;padding:10px 0}
+
+.songs-section{margin-top:30px}
+.songs-title{font-family:var(--display);font-weight:700;font-size:15px;margin-bottom:14px;display:flex;align-items:center;gap:6px}
+.songs-title .cnt{color:var(--accent3)}
+.song-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.song-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px 12px;cursor:pointer;
+  transition:all .15s;text-decoration:none;color:inherit;display:block}
+.song-card:hover{border-color:var(--accent2);box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+.song-card .sc-icon{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(236,72,153,.12));
+  display:flex;align-items:center;justify-content:center;color:var(--accent3);margin-bottom:8px}
+.song-card .sc-name{font-weight:700;font-size:12.5px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.song-card .sc-meta{font-size:10.5px;color:var(--muted2);margin-top:4px;display:flex;align-items:center;gap:4px}
+.songs-empty{text-align:center;padding:40px 20px;color:var(--muted2);font-size:13px}
+.songs-empty svg{margin-bottom:10px;color:var(--muted)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:#fff;
+  padding:10px 20px;border-radius:999px;font-size:12.5px;font-weight:600;opacity:0;pointer-events:none;transition:all .25s;z-index:999}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ═══════════════════════════════════════════════════════════
+   ✨  ระบบเอฟเฟกต์กรอบโปรไฟล์ (avatar-fx) — ชุดเดียวกับ index.html/shop.html
+   ═══════════════════════════════════════════════════════════ */
+.avatar-fx{position:relative;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;flex-shrink:0}
+.avatar-fx img{position:relative;z-index:2;border-radius:50%}
+.avatar-fx::before{content:'';position:absolute;inset:-4px;border-radius:50%;z-index:0}
+.avatar-fx::after{content:'';position:absolute;inset:-4px;border-radius:50%;z-index:1;pointer-events:none;opacity:0}
+@keyframes fxSpin{to{transform:rotate(360deg)}}
+@keyframes fxSpinRev{to{transform:rotate(-360deg)}}
+@keyframes fxGlowPulse{0%,100%{filter:brightness(1) saturate(1)}50%{filter:brightness(1.3) saturate(1.35)}}
+@keyframes fxFireFlicker{0%,100%{filter:brightness(1) hue-rotate(0deg)}25%{filter:brightness(1.2) hue-rotate(-6deg)}50%{filter:brightness(.95) hue-rotate(4deg)}75%{filter:brightness(1.15) hue-rotate(-3deg)}}
+@keyframes fxShineSweep{0%,100%{background-position:130% 130%}50%{background-position:-30% -30%}}
+@keyframes fxFrostDrift{0%,100%{opacity:.55}50%{opacity:.9}}
+@keyframes fxNeonBlink{0%,100%{opacity:1}50%{opacity:.55}}
+
+.avatar-fx.fx-ice::before{background:conic-gradient(from 0deg,#e0f7ff,#7dd3fc,#bae6fd,#e0f7ff,#38bdf8,#e0f7ff);
+  animation:fxSpin 5s linear infinite,fxGlowPulse 2.6s ease-in-out infinite;box-shadow:0 0 14px rgba(125,211,252,.75),inset 0 0 8px rgba(255,255,255,.6)}
+.avatar-fx.fx-ice::after{opacity:1;background:
+    radial-gradient(circle at 20% 25%,rgba(255,255,255,.95) 0 2px,transparent 3px),
+    radial-gradient(circle at 75% 65%,rgba(255,255,255,.9) 0 1.6px,transparent 2.6px),
+    radial-gradient(circle at 60% 20%,rgba(255,255,255,.85) 0 1.4px,transparent 2.4px),
+    linear-gradient(160deg,rgba(224,247,255,.18),rgba(125,211,252,.1));
+  animation:fxFrostDrift 2.2s ease-in-out infinite}
+
+.avatar-fx.fx-gold::before{background:conic-gradient(from 0deg,#fff3c4,#f59e0b,#fde68a,#d97706,#fff3c4);
+  animation:fxSpin 3.4s linear infinite;box-shadow:0 0 14px rgba(217,119,6,.7),inset 0 0 6px rgba(255,255,255,.5)}
+.avatar-fx.fx-gold::after{opacity:.9;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.95) 48%,rgba(255,241,194,.9) 52%,transparent 65%);
+  background-size:250% 250%;mix-blend-mode:overlay;animation:fxShineSweep 2.6s ease-in-out infinite}
+
+.avatar-fx.fx-neon::before{background:conic-gradient(from 0deg,#f0f,#818cf8,#22d3ee,#f0f);
+  animation:fxSpin 2.2s linear infinite;box-shadow:0 0 16px 2px rgba(217,70,239,.85),0 0 26px 4px rgba(34,211,238,.5)}
+.avatar-fx.fx-neon::after{opacity:1;background:radial-gradient(circle,transparent 60%,rgba(217,70,239,.35) 100%);animation:fxNeonBlink 1.3s ease-in-out infinite}
+
+.avatar-fx.fx-fire::before{background:conic-gradient(from 0deg,#fde047,#f97316,#dc2626,#f97316,#fde047);
+  animation:fxSpin 1.8s linear infinite,fxFireFlicker .5s ease-in-out infinite;box-shadow:0 0 16px rgba(220,38,38,.75)}
+.avatar-fx.fx-fire::after{opacity:.85;background:conic-gradient(from 180deg,transparent,#fde047,transparent 40%);animation:fxSpinRev 2.4s linear infinite}
+
+.avatar-fx.fx-rainbow::before{background:conic-gradient(from 0deg,#f87171,#fb923c,#facc15,#4ade80,#38bdf8,#818cf8,#f472b6,#f87171);
+  animation:fxSpin 3s linear infinite;box-shadow:0 0 14px rgba(168,85,247,.5)}
+
+.avatar-fx.fx-diamond::before{background:conic-gradient(from 0deg,#eef2ff,#fff,#c7d2fe,#fff,#eef2ff);
+  animation:fxSpin 2.6s linear infinite,fxGlowPulse 1.8s ease-in-out infinite;box-shadow:0 0 14px rgba(199,210,254,.85),inset 0 0 6px rgba(255,255,255,.7)}
+.avatar-fx.fx-diamond::after{opacity:.9;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,1) 48%,rgba(255,255,255,1) 52%,transparent 70%);
+  background-size:250% 250%;mix-blend-mode:overlay;animation:fxShineSweep 2s ease-in-out infinite}
+
+.avatar-fx.fx-default::before{background:conic-gradient(from 0deg,var(--accent),var(--pink),var(--accent3),var(--accent));
+  animation:fxSpin 4s linear infinite;box-shadow:0 0 12px var(--accent-glow)}
+
+.avatar-fx.fx-mini{width:38px;height:38px}
+.avatar-fx.fx-mini img{width:38px;height:38px}
+.avatar-fx.fx-mini:not(.fx-wings):not(.fx-crown):not(.fx-thunder):not(.fx-bubbles):not(.fx-tech)::before,
+.avatar-fx.fx-mini:not(.fx-wings):not(.fx-crown):not(.fx-thunder):not(.fx-bubbles):not(.fx-tech)::after{inset:-3px}
+
+/* ปีกขาว */
+.avatar-fx.fx-wings img{box-shadow:0 0 10px 3px rgba(255,255,255,.95),0 0 22px 8px rgba(251,191,36,.6),0 0 34px 10px rgba(168,85,247,.35);border-radius:50%}
+.avatar-fx.fx-wings::before,.avatar-fx.fx-wings::after{content:'';position:absolute;top:50%;width:105%;height:78%;
+  background:
+    repeating-linear-gradient(96deg,rgba(255,255,255,.95) 0 7%,rgba(203,213,225,.55) 7% 11%,rgba(255,255,255,.95) 11% 18%),
+    linear-gradient(135deg,#ffffff 0%,#fff7dd 30%,#fde68a 55%,#ffffff 78%,#f8fafc 100%);
+  background-size:220% 220%,100% 100%;
+  filter:drop-shadow(0 0 5px rgba(251,191,36,.95)) drop-shadow(0 0 11px rgba(251,191,36,.6)) drop-shadow(0 0 16px rgba(168,85,247,.55)) drop-shadow(0 2px 3px rgba(88,28,135,.25));
+  z-index:0;opacity:1}
+.avatar-fx.fx-wings::before{left:-75%;transform-origin:100% 50%;
+  clip-path:polygon(100% 45%,75% 20%,65% 32%,45% 10%,38% 26%,18% 14%,14% 32%,0% 42%,10% 50%,0% 58%,16% 66%,10% 80%,30% 70%,35% 90%,55% 76%,70% 92%,80% 74%,100% 55%);
+  animation:fxWingFlapL 1.1s ease-in-out infinite,fxShineSweep 2.1s ease-in-out infinite}
+.avatar-fx.fx-wings::after{left:auto;right:-75%;transform-origin:0% 50%;
+  clip-path:polygon(0% 45%,25% 20%,35% 32%,55% 10%,62% 26%,82% 14%,86% 32%,100% 42%,90% 50%,100% 58%,84% 66%,90% 80%,70% 70%,65% 90%,45% 76%,30% 92%,20% 74%,0% 55%);
+  animation:fxWingFlapR 1.1s ease-in-out infinite,fxShineSweep 2.1s ease-in-out infinite .3s}
+@keyframes fxWingFlapL{0%,100%{transform:translateY(-50%) rotate(-8deg) scaleY(1)}50%{transform:translateY(-50%) rotate(12deg) scaleY(.82)}}
+@keyframes fxWingFlapR{0%,100%{transform:translateY(-50%) rotate(8deg) scaleY(1)}50%{transform:translateY(-50%) rotate(-12deg) scaleY(.82)}}
+
+/* มงกุฎทอง */
+.avatar-fx.fx-crown img{box-shadow:0 0 0 2px rgba(245,196,81,.8),0 0 16px 4px rgba(245,196,81,.5);border-radius:50%}
+.avatar-fx.fx-crown::before{
+  content:'';border-radius:0;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='46' height='30' viewBox='0 0 46 30'><path d='M3 26 L3 14 L11 20 L15 6 L23 16 L31 6 L35 20 L43 14 L43 26 Z' fill='%23f5c451' stroke='%23d97706' stroke-width='1'/><circle cx='15' cy='6' r='2.4' fill='%23fca5a5'/><circle cx='23' cy='16' r='2.8' fill='%2393c5fd'/><circle cx='31' cy='6' r='2.4' fill='%2386efac'/></svg>");
+  background-size:contain;background-repeat:no-repeat;background-position:center;
+  position:absolute;top:-58%;left:50%;width:62%;height:40%;z-index:6;transform:translateX(-50%);
+  filter:drop-shadow(0 0 5px rgba(245,196,81,.85));
+  animation:fxCrownBob 2.2s ease-in-out infinite;
+}
+.avatar-fx.fx-crown::after{
+  content:'';position:absolute;top:-4%;left:50%;width:5px;height:5px;border-radius:50%;background:#fff;z-index:6;
+  transform:translateX(-50%);animation:fxCrownTwinkle 1.8s ease-in-out infinite;
+}
+@keyframes fxCrownBob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-4px)}}
+@keyframes fxCrownTwinkle{0%,100%{opacity:0;transform:translateX(-50%) scale(.4)}50%{opacity:1;transform:translateX(-50%) scale(1.3)}}
+
+/* กรอบสายฟ้า */
+.avatar-fx.fx-thunder img{box-shadow:0 0 0 2px rgba(96,165,250,.75),0 0 14px 3px rgba(96,165,250,.4);border-radius:50%;
+  animation:fxStormFlash 2.6s ease-in-out infinite}
+@keyframes fxStormFlash{0%,86%,100%{filter:brightness(1)}88%{filter:brightness(1.35)}91%{filter:brightness(1)}}
+.avatar-fx.fx-thunder::before,.avatar-fx.fx-thunder::after{
+  content:'';border-radius:0;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='26' viewBox='0 0 16 26'><path d='M9 0 L1 14 L7 14 L5 26 L15 10 L9 10 Z' fill='%2360a5fa'/></svg>");
+  background-size:contain;background-repeat:no-repeat;background-position:center;
+  position:absolute;width:36%;height:58%;z-index:4;opacity:0;
+  filter:drop-shadow(0 0 4px rgba(96,165,250,.9));
+}
+.avatar-fx.fx-thunder::before{top:-20%;left:-16%;animation:fxBoltStrike 2.6s ease-in-out infinite}
+.avatar-fx.fx-thunder::after{bottom:-20%;right:-16%;animation:fxBoltStrike 2.6s ease-in-out infinite .9s}
+@keyframes fxBoltStrike{0%,88%,100%{opacity:0}90%{opacity:1}94%{opacity:.3}97%{opacity:1}}
+
+/* กรอบฟองทะเล */
+.avatar-fx.fx-bubbles img{box-shadow:0 0 0 2px rgba(147,197,253,.7),0 0 14px 3px rgba(96,165,250,.4);border-radius:50%}
+.avatar-fx.fx-bubbles::before{
+  content:'';position:absolute;bottom:2%;left:50%;width:50%;height:16%;border:1px solid rgba(147,197,253,.5);
+  border-radius:50%;transform:translateX(-50%);z-index:0;animation:fxRippleOut 2.4s ease-out infinite;
+}
+.avatar-fx.fx-bubbles::after{
+  content:'';position:absolute;width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.9);
+  left:18%;bottom:-6%;z-index:4;opacity:0;
+  box-shadow:16px 4px 0 -1px rgba(255,255,255,.85),30px -8px 0 -2px rgba(255,255,255,.8),8px -16px 0 -1px rgba(255,255,255,.75);
+  animation:fxBubbleRise 3s ease-in infinite;
+}
+@keyframes fxRippleOut{0%{transform:translateX(-50%) scale(.6);opacity:.7}100%{transform:translateX(-50%) scale(1.7);opacity:0}}
+@keyframes fxBubbleRise{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(-140%);opacity:0}}
+
+/* กรอบเทคโนโลยี */
+.avatar-fx.fx-tech img{box-shadow:0 0 0 2px rgba(94,234,212,.7),0 0 14px 3px rgba(94,234,212,.4);border-radius:50%}
+.avatar-fx.fx-tech::before{
+  content:'';border-radius:0;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><g fill='none' stroke='%235eead4' stroke-width='5'><path d='M4 24 L4 4 L24 4'/><path d='M76 4 L96 4 L96 24'/><path d='M4 76 L4 96 L24 96'/><path d='M96 76 L96 96 L76 96'/></g></svg>");
+  background-size:contain;background-repeat:no-repeat;background-position:center;
+  position:absolute;top:-13%;left:-13%;width:126%;height:126%;z-index:0;
+  filter:drop-shadow(0 0 4px rgba(94,234,212,.8));
+  animation:fxCornerPulse 1.8s ease-in-out infinite;
+}
+.avatar-fx.fx-tech::after{
+  content:'';position:absolute;left:-8%;right:-8%;height:2px;z-index:4;
+  background:linear-gradient(90deg,transparent,#5eead4,transparent);
+  filter:drop-shadow(0 0 3px #5eead4);
+  animation:fxScanMove 2.2s ease-in-out infinite;
+}
+@keyframes fxCornerPulse{0%,100%{opacity:.75}50%{opacity:1}}
+@keyframes fxScanMove{0%,100%{top:0%;opacity:0}10%{opacity:1}50%{top:100%;opacity:1}60%{opacity:0}}
+
+/* ═══ ปรับขนาด/ระยะยื่นของเอฟเฟกต์ให้กระชับลงเมื่อใช้ในจุดเล็ก (fx-mini) เช่นตัวเลือกกรอบ
+   กันไม่ให้มงกุฎ/สายฟ้า/มุมเทคโนโลยียื่นล้นออกนอกช่องจนทับกัน ═══ */
+.avatar-fx.fx-mini.fx-crown::before{top:-38%;width:56%;height:36%}
+.avatar-fx.fx-mini.fx-thunder::before,.avatar-fx.fx-mini.fx-thunder::after{width:30%;height:48%}
+.avatar-fx.fx-mini.fx-thunder::before{top:-8%;left:-6%}
+.avatar-fx.fx-mini.fx-thunder::after{bottom:-8%;right:-6%}
+.avatar-fx.fx-mini.fx-tech::before{top:-6%;left:-6%;width:112%;height:112%}
+.avatar-fx.fx-mini.fx-wings::before,.avatar-fx.fx-mini.fx-wings::after{width:88%;height:62%}
+.avatar-fx.fx-mini.fx-wings::before{left:-58%}
+.avatar-fx.fx-mini.fx-wings::after{right:-58%}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="back" href="/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>กลับหน้าหลัก</a>
+  <span class="logo">SONG-ID</span>
+</nav>
+
+<div class="wrap">
+  <div id="loading">กำลังโหลดโปรไฟล์...</div>
+
+  <div id="not-found" style="display:none">
+    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>
+    <h2>ไม่พบโปรไฟล์นี้</h2>
+    <p id="not-found-msg" style="margin-bottom:14px">ผู้ใช้นี้อาจยังไม่เคย Login เข้าเว็บ</p>
+    <a href="/">กลับหน้าหลัก</a>
+  </div>
+
+  <div id="profile-view" style="display:none">
+    <div class="profile-header">
+      <span class="avatar-fx big" id="profile-avatar-fx"><img id="profile-avatar-img" src="" alt=""/></span>
+      <div class="profile-username" id="profile-username">—</div>
+      <div class="profile-bio" id="profile-bio"></div>
+      <div class="profile-stats" id="profile-stats">
+        <div class="ps-item clickable" onclick="openFollowList('followers')"><span class="ps-num" id="ps-followers">0</span><span class="ps-label">ผู้ติดตาม</span></div>
+        <div class="ps-item clickable" onclick="openFollowList('following')"><span class="ps-num" id="ps-following">0</span><span class="ps-label">กำลังติดตาม</span></div>
+        <div class="ps-item"><span class="ps-num" id="ps-likes">0</span><span class="ps-label">ถูกใจทั้งหมด</span></div>
+      </div>
+      <button class="follow-btn state-follow" id="follow-btn" style="display:none" onclick="toggleFollow()">ติดตาม</button>
+      <button class="edit-profile-btn" id="edit-profile-btn" style="display:none" onclick="toggleEditPanel()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4Z"/></svg>
+        แก้ไขโปรไฟล์
+      </button>
+    </div>
+
+    <div class="edit-panel" id="edit-panel" style="display:none">
+      <label for="bio-input">คำโปรยส่วนตัว (เขียนอะไรก็ได้)</label>
+      <textarea id="bio-input" maxlength="150" placeholder="เขียนแนะนำตัว สถานะ หรืออะไรก็ได้..."></textarea>
+      <div class="char-count"><span id="bio-len">0</span>/150</div>
+      <button class="save-bio-btn" id="save-bio-btn" onclick="saveBio()">บันทึกคำโปรย</button>
+
+      <div class="edit-divider"></div>
+      <label>เปลี่ยนกรอบโปรไฟล์ (เฉพาะกรอบที่คุณมี)</label>
+      <div class="frame-grid" id="frame-grid"><div class="frame-empty-note">กำลังโหลด…</div></div>
+    </div>
+
+    <div class="songs-section">
+      <div class="songs-title">🎵 เพลงที่อัพโหลด <span class="cnt" id="song-count-label">(0)</span></div>
+      <div class="song-grid" id="song-grid"></div>
+      <div class="songs-empty" id="songs-empty" style="display:none">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <div>ยังไม่เคยอัพโหลดเพลง</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="fl-overlay" id="fl-overlay" onclick="if(event.target===this)closeFollowList()">
+  <div class="fl-sheet">
+    <button class="fl-close" onclick="closeFollowList()">&times;</button>
+    <div class="fl-handle"></div>
+    <div class="fl-tabs">
+      <button class="fl-tab" id="fl-tab-followers" onclick="switchFollowTab('followers')">ผู้ติดตาม</button>
+      <button class="fl-tab" id="fl-tab-following" onclick="switchFollowTab('following')">กำลังติดตาม</button>
+    </div>
+    <div class="fl-list" id="fl-list"><div class="fl-loading">กำลังโหลด…</div></div>
+  </div>
+</div>
+
+<script>
+function escH(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
+
+function detectFxKey(item){
+  const s=((item.id||'')+' '+(item.name||'')).toLowerCase();
+  if(/มงกุฎ|ราชา|ราชินี|crown|king|queen/.test(s))return'crown';
+  if(/สายฟ้า|ฟ้าผ่า|thunder|lightning|storm/.test(s))return'thunder';
+  if(/ฟองทะเล|ฟองน้ำ|ฟองสมุทร|bubble|ocean|aqua/.test(s))return'bubbles';
+  if(/เทคโนโลยี|ไซเบอร์|ดิจิทัล|tech|cyber|hud/.test(s))return'tech';
+  if(/น้ำแข็ง|หิมะ|ice|frost|snow/.test(s))return'ice';
+  if(/ทอง|หรู|gold|luxury/.test(s))return'gold';
+  if(/นีออน|neon/.test(s))return'neon';
+  if(/ไฟ|เพลิง|fire|flame/.test(s))return'fire';
+  if(/รุ้ง|สายรุ้ง|rainbow/.test(s))return'rainbow';
+  if(/เพชร|คริสตัล|diamond|crystal/.test(s))return'diamond';
+  if(/ปีก|wing|นางฟ้า|angel/.test(s))return'wings';
+  if(/ไม่มี|none|no.?frame|ไม่มีกรอบ/.test(s))return'none';
+  return'default';
+}
+
+const profileId=location.pathname.split('/').filter(Boolean).pop();
+let profileData=null;
+
+function timeAgoThai(iso){
+  if(!iso)return'';
+  const d=(Date.now()-new Date(iso).getTime())/86400000;
+  if(d<1)return'วันนี้';
+  if(d<2)return'เมื่อวาน';
+  return Math.floor(d)+' วันที่แล้ว';
+}
+
+function songCardHtml(s){
+  return `<a class="song-card" href="/?song=${encodeURIComponent(s.id)}">
+    <div class="sc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+    <div class="sc-name">${escH(s.name)}</div>
+    <div class="sc-meta">❤️ ${s.votes} · ${timeAgoThai(s.addedAt)}</div>
+  </a>`;
+}
+
+async function loadProfile(){
+  if(!profileId){document.getElementById('loading').style.display='none';document.getElementById('not-found').style.display='block';return;}
+  try{
+    const res=await fetch(`/api/profile/${encodeURIComponent(profileId)}`);
+    if(!res.ok){
+      const err=await res.json().catch(()=>({}));
+      document.getElementById('not-found-msg').textContent=err.error||'ไม่พบโปรไฟล์นี้';
+      document.getElementById('loading').style.display='none';
+      document.getElementById('not-found').style.display='block';
+      return;
+    }
+    profileData=await res.json();
+    renderProfile();
+  }catch{
+    document.getElementById('not-found-msg').textContent='เชื่อมต่อเซิร์ฟเวอร์ไม่ได้';
+    document.getElementById('loading').style.display='none';
+    document.getElementById('not-found').style.display='block';
+  }
+}
+
+function renderProfile(){
+  const p=profileData;
+  document.getElementById('loading').style.display='none';
+  document.getElementById('profile-view').style.display='block';
+
+  const fxKey=(p.frameId||p.frameName)?detectFxKey({id:p.frameId,name:p.frameName}):'none';
+  document.getElementById('profile-avatar-fx').className='avatar-fx big'+(fxKey!=='none'?` fx-${fxKey}`:'');
+  document.getElementById('profile-avatar-img').src=p.avatar||'';
+  document.getElementById('profile-username').textContent=p.username||'ผู้ใช้';
+  document.title=`${p.username||'โปรไฟล์'} — SONG-ID`;
+
+  const bioEl=document.getElementById('profile-bio');
+  if(p.bio){bioEl.textContent=p.bio;bioEl.classList.remove('empty');}
+  else{bioEl.textContent=p.isSelf?'ยังไม่มีคำโปรย — กด "แก้ไขโปรไฟล์" เพื่อเขียนแนะนำตัวได้เลย':'ยังไม่มีคำโปรย';bioEl.classList.add('empty');}
+
+  if(p.isSelf){
+    document.getElementById('edit-profile-btn').style.display='inline-flex';
+    document.getElementById('bio-input').value=p.bio||'';
+    document.getElementById('bio-len').textContent=(p.bio||'').length;
+    loadFramePicker();
+  }else{
+    renderFollowBtn(p.viewerIsFollowing);
+  }
+
+  document.getElementById('ps-followers').textContent=numFmt(p.followersCount||0);
+  document.getElementById('ps-following').textContent=numFmt(p.followingCount||0);
+  document.getElementById('ps-likes').textContent=numFmt(p.totalLikes||0);
+
+  document.getElementById('song-count-label').textContent=`(${p.songCount})`;
+  const grid=document.getElementById('song-grid');
+  if(p.songs&&p.songs.length){
+    grid.innerHTML=p.songs.map(songCardHtml).join('');
+    document.getElementById('songs-empty').style.display='none';
+  }else{
+    grid.innerHTML='';
+    document.getElementById('songs-empty').style.display='block';
+  }
+}
+
+function toggleEditPanel(){
+  const panel=document.getElementById('edit-panel');
+  panel.style.display=panel.style.display==='none'?'block':'none';
+}
+
+// ── จัดรูปเลขจำนวนให้อ่านง่าย (1.2K / 3.4M) ไม่ใช้อีโมจิ ──
+function numFmt(n){
+  n=Number(n)||0;
+  if(n>=1000000)return(n/1000000).toFixed(1).replace(/\.0$/,'')+'M';
+  if(n>=1000)return(n/1000).toFixed(1).replace(/\.0$/,'')+'K';
+  return String(n);
+}
+
+function renderFollowBtn(isFollowing){
+  const btn=document.getElementById('follow-btn');
+  btn.style.display='inline-flex';
+  btn.disabled=false;
+  if(isFollowing){
+    btn.className='follow-btn state-following';
+    btn.textContent='กำลังติดตาม';
+    btn.onmouseenter=()=>{if(btn.classList.contains('state-following'))btn.textContent='เลิกติดตาม';};
+    btn.onmouseleave=()=>{if(btn.classList.contains('state-following'))btn.textContent='กำลังติดตาม';};
+  }else{
+    btn.className='follow-btn state-follow';
+    btn.textContent='ติดตาม';
+    btn.onmouseenter=null;btn.onmouseleave=null;
+  }
+}
+
+async function toggleFollow(){
+  const btn=document.getElementById('follow-btn');
+  const currentlyFollowing=btn.classList.contains('state-following');
+  const endpoint=currentlyFollowing?'unfollow':'follow';
+  btn.disabled=true;
+  try{
+    const res=await fetch(`/api/profile/${encodeURIComponent(profileId)}/${endpoint}`,{method:'POST'});
+    const data=await res.json();
+    if(!res.ok||!data.success){
+      showToast(data.error||'ทำรายการไม่สำเร็จ');
+      btn.disabled=false;
+      return;
+    }
+    profileData.viewerIsFollowing=data.following;
+    profileData.followersCount=data.followersCount;
+    document.getElementById('ps-followers').textContent=numFmt(data.followersCount||0);
+    renderFollowBtn(data.following);
+    showToast(data.following?'ติดตามแล้ว':'เลิกติดตามแล้ว');
+  }catch{
+    showToast('เชื่อมต่อเซิร์ฟเวอร์ไม่ได้');
+    btn.disabled=false;
+  }
+}
+
+// ═══ Bottom sheet: รายชื่อผู้ติดตาม / กำลังติดตาม ═══
+let flCurrentTab=null;
+const flCache={};
+
+function openFollowList(tab){
+  document.getElementById('fl-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  switchFollowTab(tab);
+}
+function closeFollowList(){
+  document.getElementById('fl-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function switchFollowTab(tab){
+  flCurrentTab=tab;
+  document.getElementById('fl-tab-followers').classList.toggle('on',tab==='followers');
+  document.getElementById('fl-tab-following').classList.toggle('on',tab==='following');
+  renderFollowList(tab);
+  if(!flCache[tab])loadFollowList(tab);
+}
+async function loadFollowList(tab){
+  try{
+    const res=await fetch(`/api/profile/${encodeURIComponent(profileId)}/${tab}`);
+    const data=await res.json();
+    flCache[tab]=Array.isArray(data.users)?data.users:[];
+  }catch{
+    flCache[tab]=null;
+  }
+  if(flCurrentTab===tab)renderFollowList(tab);
+}
+function renderFollowList(tab){
+  const listEl=document.getElementById('fl-list');
+  const users=flCache[tab];
+  if(!users){
+    listEl.innerHTML=(users===null)?'<div class="fl-empty">โหลดรายชื่อไม่สำเร็จ ลองใหม่อีกครั้ง</div>':'<div class="fl-loading">กำลังโหลด…</div>';
+    return;
+  }
+  if(!users.length){
+    listEl.innerHTML=`<div class="fl-empty">${tab==='followers'?'ยังไม่มีผู้ติดตาม':'ยังไม่ได้ติดตามใคร'}</div>`;
+    return;
+  }
+  listEl.innerHTML=users.map(u=>`
+    <a class="fl-row" href="/profile/${encodeURIComponent(u.id)}">
+      <img src="${escH(u.avatar||'https://cdn.discordapp.com/embed/avatars/0.png')}" alt="">
+      <span class="fl-row-name">${escH(u.username)}</span>
+    </a>`).join('');
+}
+
+document.getElementById('bio-input').addEventListener('input',(e)=>{
+  document.getElementById('bio-len').textContent=e.target.value.length;
+});
+
+async function saveBio(){
+  const btn=document.getElementById('save-bio-btn');
+  const bio=document.getElementById('bio-input').value;
+  btn.disabled=true;
+  try{
+    const res=await fetch('/api/profile/bio',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({bio})});
+    const data=await res.json();
+    if(data.success){
+      profileData.bio=data.bio;
+      const bioEl=document.getElementById('profile-bio');
+      if(data.bio){bioEl.textContent=data.bio;bioEl.classList.remove('empty');}
+      else{bioEl.textContent='ยังไม่มีคำโปรย — กด "แก้ไขโปรไฟล์" เพื่อเขียนแนะนำตัวได้เลย';bioEl.classList.add('empty');}
+      showToast('บันทึกคำโปรยแล้ว');
+    }else{showToast(data.error||'บันทึกไม่สำเร็จ');}
+  }catch{showToast('เชื่อมต่อเซิร์ฟเวอร์ไม่ได้');}
+  finally{btn.disabled=false;}
+}
+
+async function loadFramePicker(){
+  const wrap=document.getElementById('frame-grid');
+  try{
+    const res=await fetch('/api/cosmetics/catalog');
+    const data=await res.json();
+    const owned=data.owned||[];
+    const equippedFrame=data.equipped?.frame;
+    const frames=(data.catalog||[]).filter(c=>c.type==='frame'&&owned.includes(c.id));
+    if(!frames.length){wrap.innerHTML='<div class="frame-empty-note">ยังไม่มีกรอบที่แลกไว้เลย ไปแลกที่ <a href="/shop">ร้านค้า</a> ได้นะ</div>';return;}
+    wrap.innerHTML=frames.map(f=>{
+      const fxKey=detectFxKey(f);
+      const isEquipped=f.id===equippedFrame;
+      return `<button class="frame-pick${isEquipped?' equipped':''}" data-id="${escH(f.id)}" onclick="equipFrame('${escH(f.id)}')">
+        <span class="avatar-fx fx-mini${fxKey!=='none'?` fx-${fxKey}`:''}"><img src="${escH(profileData.avatar)}" alt=""></span>
+        <span class="fp-name">${escH(f.name)}</span>
+      </button>`;
+    }).join('');
+  }catch{
+    wrap.innerHTML='<div class="frame-empty-note">โหลดรายการกรอบไม่สำเร็จ</div>';
+  }
+}
+
+async function equipFrame(itemId){
+  try{
+    const res=await fetch('/api/cosmetics/equip',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({itemId})});
+    const data=await res.json();
+    if(data.success){
+      showToast('เปลี่ยนกรอบแล้ว');
+      await loadProfile(); // โหลดใหม่ทั้งหน้าเพื่ออัปเดตทั้ง avatar ใหญ่ + ไฮไลต์ในกริด
+      document.getElementById('edit-panel').style.display='block';
+    }else{showToast(data.error||'เปลี่ยนกรอบไม่สำเร็จ');}
+  }catch{showToast('เชื่อมต่อเซิร์ฟเวอร์ไม่ได้');}
+}
+
+loadProfile();
+</script>
+</body>
+</html>

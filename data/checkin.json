@@ -1,0 +1,5991 @@
+{
+  "users": {
+    "1221412727306850355": {
+      "coins": 144047,
+      "streak": 1,
+      "lastCheckin": "2026-09-26",
+      "lastGacha": "2026-09-26",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_neon",
+          "frame_ice",
+          "frame_gold",
+          "theme_green",
+          "theme_pink",
+          "theme_gold",
+          "theme_blue",
+          "frame_wings",
+          "frame_rainbow",
+          "frame_tech",
+          "frame_bubbles",
+          "frame_crown",
+          "frame_thunder"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_tech"
+      },
+      "lastCustomRole": "2026-09-09",
+      "customRoles": [
+        {
+          "roleId": "1547179435160113233",
+          "name": "เทส",
+          "color": "#deb8ff",
+          "createdAt": "2026-09-09T09:38:43.390Z"
+        }
+      ],
+      "bio": "6767",
+      "following": [
+        "1404705067667427358",
+        "p078644",
+        "1375498770774626487",
+        "1264377345293418589",
+        "1534540629290389526",
+        "1498784193423872171",
+        "1520364151464136724",
+        "1123951367090876506"
+      ]
+    },
+    "1481600934407573607": {
+      "coins": 20,
+      "streak": 1,
+      "lastCheckin": "2026-07-07"
+    },
+    "1336096333718753341": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1397226259615973416": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1399145861451223104": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1350810590918217771": {
+      "coins": 852,
+      "streak": 5,
+      "lastCheckin": "2026-08-23",
+      "lastGacha": "2026-08-23"
+    },
+    "970593566206345247": {
+      "coins": 30,
+      "streak": 1,
+      "lastCheckin": "2026-08-09",
+      "lastGacha": "2026-08-09",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "theme_pink"
+        ],
+        "theme": "theme_pink",
+        "frame": "frame_none"
+      }
+    },
+    "1520601829313085514": {
+      "coins": 10,
+      "streak": 1,
+      "lastCheckin": "2026-07-04"
+    },
+    "1248432468051361818": {
+      "coins": 25,
+      "streak": 1,
+      "lastCheckin": "2026-07-26",
+      "lastGacha": "2026-07-26"
+    },
+    "1195363111293698058": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1466758722322825350": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1493566309928009809": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1177994086796492943": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1517900319999135869": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1416302392483512322": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1430067358084501574": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1512349518874542132": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1408471348208074754": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1072089534680006746": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1507415959218950186": {
+      "coins": 382,
+      "streak": 1,
+      "lastCheckin": "2026-09-22",
+      "lastGacha": "2026-09-22"
+    },
+    "1492796089089130620": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1399439941007577344": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1523602605002068030": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1384408433087877151": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1428491063613460514": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1157971727729569815": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1522813367906074788": {
+      "coins": 33,
+      "streak": 1,
+      "lastCheckin": "2026-07-14",
+      "lastGacha": "2026-07-14"
+    },
+    "1382756329759834225": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1502241620857196716": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1369838280593510506": {
+      "coins": 96,
+      "streak": 1,
+      "lastCheckin": "2026-09-24",
+      "lastGacha": "2026-09-24"
+    },
+    "1332366111924158535": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1518255413903098021": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1023119212354486294": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1523732172920328399": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1452578000116650064": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1511662763574034516": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1455227954622890162": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1523529461671268446": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1334533178022690933": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1431426953407365285": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1481696103731822694": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "759794122168205332": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1510123834626412684": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1267473316999069741": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1443138311349604514": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "796400452144857119": {
+      "coins": 30,
+      "streak": 1,
+      "lastCheckin": "2026-09-06"
+    },
+    "1001481041569124483": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1222150505954934835": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1393992325117771907": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1383394826153623622": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1524356057693032589": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1323241470727028771": {
+      "coins": 64,
+      "streak": 1,
+      "lastCheckin": "2026-08-03",
+      "lastGacha": "2026-08-03"
+    },
+    "1134498477058043936": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1514149940782305373": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1334132040303382630": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "692392978307743775": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1511712842087272582": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "877089496393482303": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1050074925945331722": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1513912535659839568": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1523654013986410647": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1498641477931368508": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1109309952658518199": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1259390544464052349": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1487724787349586061": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "943362521098747944": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1499322013934944257": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1524378152133070919": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1523188371596382268": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1378676099571257425": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1277350667194990613": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1439492165670670387": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1406277566968369202": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1282164293424513070": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1397280193609072680": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1073921368757903420": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1383454885365678140": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1517809012605976703": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1446836662293233735": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1443888982084812957": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1480046370433007666": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1500148027921535068": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1375891807832903704": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1100454395738603582": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1366743170817331225": {
+      "coins": 45,
+      "streak": 1,
+      "lastCheckin": "2026-08-13",
+      "lastGacha": "2026-08-13",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_neon",
+          "theme_blue"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_neon"
+      }
+    },
+    "934785560441143318": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1406313598992515226": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1512907074315485209": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1095873423735005244": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1468621796600320032": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1403978645562855537": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1497231534921351320": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1460486033027105032": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1342019287581458472": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1293133748736491593": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1505902873656033340": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "707670973486203014": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1509469941345288265": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1511028808696987699": {
+      "coins": 81,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1442486774050852870": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1513776162000863276": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1423666329822695544": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1501513594200653900": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1511704715551834292": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1492487132445413420": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1520480109767950359": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1499710066994184282": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1524264599908515983": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1520021815353671751": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1521893798534189272": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1264377345293418589": {
+      "coins": 1141,
+      "streak": 1,
+      "lastCheckin": "2026-08-04",
+      "lastGacha": "2026-08-04",
+      "lastCustomRole": "2026-08-04",
+      "customRoles": [
+        {
+          "roleId": "1532223753390526565",
+          "name": "กูโอมรุ่นใหญ่ดิสRVX",
+          "color": "#000000",
+          "createdAt": "2026-07-30T03:10:10.895Z"
+        },
+        {
+          "roleId": "1534226377539326113",
+          "name": "กูโอมตัวดับพวกtiw",
+          "color": "#ffff00",
+          "createdAt": "2026-08-04T15:47:53.779Z"
+        }
+      ],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "theme_pink",
+          "theme_blue"
+        ],
+        "theme": "theme_blue",
+        "frame": "frame_none"
+      }
+    },
+    "1503648125938827382": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1517119414154297416": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1324613598227599431": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1515611944365850694": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1502203134611816511": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1384555224286363732": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1386324887035183168": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "979339591624585216": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null
+    },
+    "1203907704888889425": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1151538973701849189": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "880307971429638244": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1350807664678015056": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1503396276723515513": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1396410226508562546": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1464136419923722385": {
+      "coins": 2,
+      "streak": 1,
+      "lastCheckin": "2026-08-08",
+      "lastGacha": "2026-07-24",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1375498770774626487": {
+      "coins": 14201,
+      "streak": 1,
+      "lastCheckin": "2026-08-07",
+      "lastGacha": "2026-09-01",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "bio": "Deecarp"
+    },
+    "1429777503656083499": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1448313525117259958": {
+      "coins": 100,
+      "streak": 2,
+      "lastCheckin": "2026-08-02",
+      "lastGacha": "2026-08-02",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1520363773465202760": {
+      "coins": 10,
+      "streak": 1,
+      "lastCheckin": "2026-07-25",
+      "lastGacha": null,
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1498711915826909268": {
+      "coins": 7,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1404705067667427358": {
+      "coins": 336453,
+      "streak": 1,
+      "lastCheckin": "2026-08-01",
+      "lastGacha": "2026-09-24",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "theme_pink",
+          "frame_ice",
+          "frame_gold",
+          "frame_neon",
+          "frame_wings",
+          "frame_rainbow",
+          "frame_thunder",
+          "frame_bubbles",
+          "frame_tech"
+        ],
+        "theme": "theme_pink",
+        "frame": "frame_tech"
+      },
+      "lastCustomRole": "2026-09-27",
+      "customRoles": [
+        {
+          "roleId": "1532271430824104019",
+          "name": "รุ่นใหญ่ไซส์มินิ",
+          "color": "#850000",
+          "createdAt": "2026-07-30T06:19:37.967Z"
+        },
+        {
+          "roleId": "1533060363296182364",
+          "name": "👑 ราชาเบียว 👑",
+          "color": "#ffd414",
+          "createdAt": "2026-08-01T10:34:34.148Z"
+        },
+        {
+          "roleId": "1538935439443107900",
+          "name": "love you นะยัยบ๊องง🩷",
+          "color": "#d663a6",
+          "createdAt": "2026-08-17T15:40:01.759Z"
+        },
+        {
+          "roleId": "1553829582941982924",
+          "name": "เด็กเส้น",
+          "color": "#912af7",
+          "createdAt": "2026-09-27T18:04:02.408Z"
+        }
+      ]
+    },
+    "1523473505163677738": {
+      "coins": 51,
+      "streak": 1,
+      "lastCheckin": "2026-07-28",
+      "lastGacha": "2026-07-28",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1498784193423872171": {
+      "coins": 9722,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": "2026-08-27",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_ice",
+          "theme_blue"
+        ],
+        "theme": "theme_blue",
+        "frame": "frame_ice"
+      }
+    },
+    "822315186479824897": {
+      "coins": 6,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1385214626811346976": {
+      "coins": 64,
+      "streak": 1,
+      "lastCheckin": "2026-07-30",
+      "lastGacha": "2026-07-30",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1531205007653863449": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1392741575724892234": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1218859596157030513": {
+      "coins": 10,
+      "streak": 1,
+      "lastCheckin": "2026-07-28",
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1388619282929160336": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "898405411022045244": {
+      "coins": 24,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": "2026-07-28",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1279276086307455000": {
+      "coins": 84,
+      "streak": 1,
+      "lastCheckin": "2026-07-29",
+      "lastGacha": "2026-08-08",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1452857199356412011": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1266595864596582554": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1512400750431699071": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1202209533850824725": {
+      "coins": 39,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1116761571931201658": {
+      "coins": 34,
+      "streak": 1,
+      "lastCheckin": "2026-07-30",
+      "lastGacha": "2026-07-30",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1530969103832060040": {
+      "coins": 90,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1381851269437718619": {
+      "coins": 5,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1532869640282312845": {
+      "coins": 19,
+      "streak": 1,
+      "lastCheckin": "2026-08-01",
+      "lastGacha": "2026-08-01",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1507946102991622218": {
+      "coins": 370,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1526971201149472779": {
+      "coins": 104240,
+      "streak": 2,
+      "lastCheckin": "2026-08-04",
+      "lastGacha": "2026-09-28",
+      "lastCustomRole": "2026-09-30",
+      "customRoles": [
+        {
+          "roleId": "1552665638596771913",
+          "name": "อดีตเบต้าเทศเตอร์亗//[<RUV>]//",
+          "color": "#a855f7",
+          "createdAt": "2026-09-24T12:58:56.162Z"
+        },
+        {
+          "roleId": "1553659446171930686",
+          "name": "เลิกสาดเหอะสมาชิก亗",
+          "color": "#551491",
+          "createdAt": "2026-09-27T06:47:58.210Z"
+        },
+        {
+          "roleId": "1554267663809908800",
+          "name": "เลิกสาดนะสมาชิก",
+          "color": "#a855f7",
+          "createdAt": "2026-09-28T23:04:48.921Z"
+        },
+        {
+          "roleId": "1554848962312282216",
+          "name": "มึงอย่าตุ๋ยดุ้ย",
+          "color": "#a855f7",
+          "createdAt": "2026-09-30T13:34:41.920Z"
+        }
+      ],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_ice",
+          "frame_wings",
+          "theme_gold"
+        ],
+        "theme": "theme_gold",
+        "frame": "frame_wings"
+      }
+    },
+    "1440208919019393107": {
+      "coins": 55,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1512622967081926736": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1505483203689844786": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1506979852077760677": {
+      "coins": 46,
+      "streak": 1,
+      "lastCheckin": "2026-08-03",
+      "lastGacha": "2026-08-04",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_ice",
+          "theme_blue"
+        ],
+        "theme": "theme_blue",
+        "frame": "frame_ice"
+      }
+    },
+    "1501867156038484079": {
+      "coins": 106,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1532342761871638616": {
+      "coins": 93,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1532203822452183093": {
+      "coins": 30,
+      "streak": 1,
+      "lastCheckin": "2026-08-03",
+      "lastGacha": "2026-08-03",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "965510816109572097": {
+      "coins": 532,
+      "streak": 1,
+      "lastCheckin": "2026-08-17",
+      "lastGacha": "2026-08-17",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1354267479349657672": {
+      "coins": 10,
+      "streak": 1,
+      "lastCheckin": "2026-08-03",
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1505781720740397086": {
+      "coins": 6,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": "2026-08-03",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1429501061877469304": {
+      "coins": 33,
+      "streak": 1,
+      "lastCheckin": "2026-08-03",
+      "lastGacha": "2026-08-03",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1505275480423792831": {
+      "coins": 195,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1371540661374943242": {
+      "coins": 19,
+      "streak": 1,
+      "lastCheckin": "2026-08-07",
+      "lastGacha": "2026-08-07",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1365160054604697621": {
+      "coins": 97002,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_wings",
+          "frame_neon"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_wings"
+      }
+    },
+    "1395987183692939384": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1497504506567721072": {
+      "coins": 12,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1150318499336552518": {
+      "coins": 20,
+      "streak": 1,
+      "lastCheckin": "2026-08-21",
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1529722603798003782": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1531140980588281971": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1454492297835053097": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1482376151052713994": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1492157976788865065": {
+      "coins": 5,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "308213887130664960": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1520469769579397203": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1469576256063537227": {
+      "coins": 79,
+      "streak": 1,
+      "lastCheckin": "2026-09-08",
+      "lastGacha": "2026-09-08",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1509146981749096458": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1098876428675727403": {
+      "coins": 24,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": "2026-08-12",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1488438293740912693": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1456154793507688644": {
+      "coins": 4,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1264487763277905932": {
+      "coins": 74,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1376168407506092094": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1396176675221278752": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1529832737719058609": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "bio": "รักนะ"
+    },
+    "1089300444523790356": {
+      "coins": 26,
+      "streak": 1,
+      "lastCheckin": "2026-09-08",
+      "lastGacha": "2026-08-13",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1489487351011999755": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1415707841515491328": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1041710307145424907": {
+      "coins": 10,
+      "streak": 1,
+      "lastCheckin": "2026-08-14",
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1299801706321674300": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1426332791842541640": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "716199888643162164": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1271697858759753749": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1523645988613652480": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1532007276418830582": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1508858819416166543": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1532572247980773460": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1535220489545453648": {
+      "coins": 2,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1123951367090876506": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1484011155835064460": {
+      "coins": 1,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1411338192409333871": {
+      "coins": 22,
+      "streak": 1,
+      "lastCheckin": "2026-09-13",
+      "lastGacha": "2026-09-13",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1368878664959393853": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1534960158491410452": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1492199654044209365": {
+      "coins": 2,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1540018390427504742": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1503640623901573220": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1467070766674743493": {
+      "coins": 40,
+      "streak": 1,
+      "lastCheckin": "2026-08-28",
+      "lastGacha": "2026-08-28",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1508656341173145685": {
+      "coins": 17,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": "2026-08-21",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1388916202063007915": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "901747184553320469": {
+      "coins": 0,
+      "streak": 1,
+      "lastCheckin": "2026-08-23",
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1534939942940180740": {
+      "coins": 492,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1245665119271387179": {
+      "coins": 18,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": "2026-08-23",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1533361675372200041": {
+      "coins": 48,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1530592844673454270": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1378770875993690288": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1537055571574788098": {
+      "coins": 10,
+      "streak": 1,
+      "lastCheckin": "2026-08-24",
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1541447412889948223": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1534540629290389526": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1541499101122789408": {
+      "coins": 13,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1337332583964610562": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1401140559858630706": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1483502088234205376": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1418610004667269264": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1474416654900396072": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "864828209413226547": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1418995397841518614": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1542548424338047079": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1331338059437965362": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1337074674634457199": {
+      "coins": 433,
+      "streak": 1,
+      "lastCheckin": "2026-09-22",
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1186551605160574997": {
+      "coins": 8,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": "2026-09-17",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1471021988163354798": {
+      "coins": 4,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1539927771516764251": {
+      "coins": 3,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1333272490012704781": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1365516149797945354": {
+      "coins": 187,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1529086149312647168": {
+      "coins": 71,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1317736535646408815": {
+      "coins": 1,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1500457873241804881": {
+      "coins": 16,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1406484702088528075": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1431494330643910729": {
+      "coins": 22,
+      "streak": 1,
+      "lastCheckin": "2026-09-09",
+      "lastGacha": "2026-09-09",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1371687421510553751": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1470740357850595350": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1524719904010539078": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1442433300789727444": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1479000995110453301": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1494589657332187256": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1187237342004650085": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1489322785825357945": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1458339498176806957": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      }
+    },
+    "1408761095627341925": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1276438139367591989": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "611505040376594443": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "p078644": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1442787861110718616": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1520364151464136724": {
+      "coins": 4181,
+      "streak": 1,
+      "lastCheckin": "2026-10-01",
+      "lastGacha": "2026-10-01",
+      "lastCustomRole": "2026-10-01",
+      "customRoles": [
+        {
+          "roleId": "1555071207567790121",
+          "name": "🔒สูตรรูเตี๋ยว〰️❇️",
+          "color": "#000000",
+          "createdAt": "2026-10-01T04:17:48.383Z"
+        }
+      ],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_gold"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1547952379008122881": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "303146364219555841": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1022869782405595326": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1466024197712252998": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1405918099898630364": {
+      "coins": 52,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1164186730413424640": {
+      "coins": 81,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1161297965961465887": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1471101657885573236": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1427386944790466884": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1398680569591763036": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1497135549419622501": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "857775766132490261": {
+      "coins": 10,
+      "streak": 1,
+      "lastCheckin": "2026-09-15",
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1529480147986550981": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1461728896323031209": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "890504897311698954": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1457381879723593891": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1239585837155614754": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1379321627291942942": {
+      "coins": 10,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1379273499046056062": {
+      "coins": 52,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": "2026-09-16",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1486243122504794195": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1413470730825240597": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "744185157082415175": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1359220706126204958": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1376521393935749182": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1502287358920491118": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1360519796143427606": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1542905652895285308": {
+      "coins": 43,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1026721900891746324": {
+      "coins": 37771,
+      "streak": 1,
+      "lastCheckin": "2026-10-01",
+      "lastGacha": "2026-10-01",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_wings"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_wings"
+      },
+      "following": []
+    },
+    "1382716737388150835": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1273309141800194099": {
+      "coins": 22,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1183246706368852040": {
+      "coins": 105076,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1317784954377343008": {
+      "coins": 9350,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": "2026-09-24",
+      "customRoles": [
+        {
+          "roleId": "1552665721668894830",
+          "name": "ควยใหญ่",
+          "color": "#a855f7",
+          "createdAt": "2026-09-24T12:59:16.320Z"
+        }
+      ],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1425798166514630737": {
+      "coins": 188,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1397531498810445865": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1550189792547967110": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1227916053309423700": {
+      "coins": 18,
+      "streak": 1,
+      "lastCheckin": "2026-09-20",
+      "lastGacha": "2026-09-20",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "432114784549470208": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1287705511805976591": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1279366610641092614": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1382575221214806016": {
+      "coins": 100007,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1007524897003679747": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1039378148212604938": {
+      "coins": 10,
+      "streak": 1,
+      "lastCheckin": "2026-09-20",
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "912513574398750730": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1301525046371684363": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1502520043655663766": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1169069850866499675": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1399127347525058700": {
+      "coins": 5,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1424609918572433540": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "เดี๋ยวลงให้เรื่อยๆคับ°^°",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1377920729814798459": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1503605297065758792": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1485843500393299978": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1499030857594179605": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1531527070587420722": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1460160333032194219": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1456981600733495411": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1333356908857266192": {
+      "coins": 1,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1538368237614530649": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1064387584853295175": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "741550506022797356": {
+      "coins": 22,
+      "streak": 1,
+      "lastCheckin": "2026-09-24",
+      "lastGacha": "2026-09-24",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1365673902973386774": {
+      "coins": 98559,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_wings"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1546164149309014069": {
+      "coins": 9975,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "781264936194015243": {
+      "coins": 100162,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1462818720014401689": {
+      "coins": 39403,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": "2026-09-24",
+      "customRoles": [
+        {
+          "roleId": "1552664554360799233",
+          "name": "เค้ารักอ้วน",
+          "color": "#ff00ff",
+          "createdAt": "2026-09-24T12:54:37.603Z"
+        }
+      ],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1538156117656346626": {
+      "coins": 100000,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1510800377422024776": {
+      "coins": 100007,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1237802349368578120": {
+      "coins": 100039,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "769023064297177098": {
+      "coins": 100000,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1368279274775122041": {
+      "coins": 100000,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "690800720710205442": {
+      "coins": 38492,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": "2026-09-24",
+      "customRoles": [
+        {
+          "roleId": "1552665970173149295",
+          "name": "เลียหีแพล่บๆ",
+          "color": "#a855f7",
+          "createdAt": "2026-09-24T13:00:15.177Z"
+        }
+      ],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1518164097437532251": {
+      "coins": 100125,
+      "streak": 2,
+      "lastCheckin": "2026-09-30",
+      "lastGacha": "2026-09-30",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1531727586793881730": {
+      "coins": 79482,
+      "streak": 1,
+      "lastCheckin": "2026-09-25",
+      "lastGacha": "2026-09-25",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1550461921524850775": {
+      "coins": 100000,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1550149466399580223": {
+      "coins": 100002,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1418553905951805473": {
+      "coins": 14,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_rainbow",
+          "frame_tech"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_tech"
+      },
+      "following": []
+    },
+    "1521508885033255055": {
+      "coins": 100000,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1425344741507203114": {
+      "coins": 100112,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1312274027360026694": {
+      "coins": 100013,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1392411822753185812": {
+      "coins": 100000,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1501564366032605338": {
+      "coins": 104678,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1256971376942780516": {
+      "coins": 100000,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1411703949915984022": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1298570174261366819": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1550732986440224888": {
+      "coins": 100012,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1211642786366095363": {
+      "coins": 11482,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": "2026-09-24",
+      "lastCustomRole": "2026-09-24",
+      "customRoles": [
+        {
+          "roleId": "1552669315348566056",
+          "name": "เด็กโข่ง",
+          "color": "#a855f7",
+          "createdAt": "2026-09-24T13:13:32.708Z"
+        }
+      ],
+      "bio": "หิวข้าว",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_wings"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_wings"
+      },
+      "following": []
+    },
+    "1136159391419203584": {
+      "coins": 100002,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1424704919704698910": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1406628509769535551": {
+      "coins": 10,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1411680933547085824": {
+      "coins": 1,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1467070466366767320": {
+      "coins": 211,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1516797710118813736": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1482628973316800533": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1435133239554740374": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "736062952737603595": {
+      "coins": 82,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1547048099451637895": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1552254575119958130": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1300440946072354868": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1415708824513286334": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1417642522011893800": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1389557205979893762": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1493207202654195814": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1503616106915692614": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1515030461640999112": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1519755264952111278": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1458121168673308716": {
+      "coins": 631,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1539661551882076240": {
+      "coins": 456,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": "2026-09-26",
+      "lastCustomRole": "2026-09-29",
+      "customRoles": [
+        {
+          "roleId": "1554495427510800394",
+          "name": "หัวดิสน่ารัก",
+          "color": "#ff6be4",
+          "createdAt": "2026-09-29T14:09:51.834Z"
+        }
+      ],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_ice"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_ice"
+      },
+      "following": []
+    },
+    "1512439467418583255": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1242064877120389149": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1433783024457351311": {
+      "coins": 60,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1093240257773830356": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1503412037584294001": {
+      "coins": 34,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1428004281054924962": {
+      "coins": 1367,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1545488009934409795": {
+      "coins": 2,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1443862262925234267": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1466323389152104448": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1250841766400098397": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1385938864039792760": {
+      "coins": 1762,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1445615108377018429": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1461390249887531246": {
+      "coins": 3,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1442729023733239935": {
+      "coins": 9,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1553800689048621230": {
+      "coins": 1,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "710456766395318285": {
+      "coins": 22,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1232279918046613536": {
+      "coins": 978,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1156865143259541524": {
+      "coins": 17,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": "2026-09-28",
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1459373495090811039": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1475834051469377597": {
+      "coins": 784,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1504715488079646720": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1519287789072420965": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1483430946630795294": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1544745793183813632": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1483569199438627078": {
+      "coins": 769,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1534140075921641562": {
+      "coins": 1012,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1530584872517636217": {
+      "coins": 17,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1517694362203590862": {
+      "coins": 12,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1378899779895033947": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1338452640698208289": {
+      "coins": 96,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1038743354030166037": {
+      "coins": 60,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1354293181407170660": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1534149629271080973": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1231754795174465557": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1456114281576792066": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1499706201003262037": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1513557179955941501": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1072338084743622658": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1415726200302600395": {
+      "coins": 24,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1171761177169248309": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "876513847270338560": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1055407268339912764": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1514862405417566360": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1498547808205144125": {
+      "coins": 134,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none",
+          "frame_neon",
+          "theme_gold"
+        ],
+        "theme": "theme_gold",
+        "frame": "frame_neon"
+      },
+      "following": []
+    },
+    "1551495476917047297": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1185903964177313795": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1433176163718664354": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1512830078726439053": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1554475173954977852": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1407892884501303368": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1551170165834522670": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1385989227757568102": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1362754245987795024": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1469596984900849717": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1510075114962681926": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1449772689530163434": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1500536023208296509": {
+      "coins": 19,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    },
+    "1462799633611751435": {
+      "coins": 0,
+      "streak": 0,
+      "lastCheckin": null,
+      "lastGacha": null,
+      "lastCustomRole": null,
+      "customRoles": [],
+      "bio": "",
+      "cosmetics": {
+        "owned": [
+          "theme_default",
+          "frame_none"
+        ],
+        "theme": "theme_default",
+        "frame": "frame_none"
+      },
+      "following": []
+    }
+  },
+  "roles": [
+    {
+      "id": "1522578279578472538",
+      "name": "👑|พรีเมี่ยม",
+      "price": 59999
+    },
+    {
+      "id": "1522957054405382344",
+      "name": "𐙚₊˚⊹♡ สุดสวย ♡⊹˚₊𐙚",
+      "price": 10
+    },
+    {
+      "id": "1522956885249101905",
+      "name": "𐙚₊˚⊹♡ สุดหล่อ ♡⊹˚₊𐙚",
+      "price": 10
+    },
+    {
+      "id": "1529807445503770735",
+      "name": "เล่นได้ลาบมาก",
+      "price": 1000
+    },
+    {
+      "id": "1529807547656048720",
+      "name": "อาหวัง",
+      "price": 100
+    },
+    {
+      "id": "1531802550477521117",
+      "name": "พร้อมเปย์",
+      "price": 5000
+    },
+    {
+      "id": "1531803045732548770",
+      "name": "อยู่ทุกดราม่า",
+      "price": 99
+    },
+    {
+      "id": "1531803611032457339",
+      "name": "ลูกรักแอด",
+      "price": 555
+    },
+    {
+      "id": "1531802791344082965",
+      "name": "ออนไลน์24ชม.",
+      "price": 2424
+    },
+    {
+      "id": "1540691363283214458",
+      "name": "ระดับสั่งการ",
+      "price": 19990
+    },
+    {
+      "id": "1531805058168262878",
+      "name": "ขายไตแลกยศ",
+      "price": 4999999
+    },
+    {
+      "id": "1514876529367056444",
+      "name": "สมาชิก",
+      "price": 10000000000000000000
+    },
+    {
+      "id": "1548737873803481249",
+      "name": "โสด",
+      "price": 499
+    }
+  ],
+  "cosmeticOverrides": {
+    "frame_wings": {
+      "salePrice": 2999,
+      "saleUntil": "2026-10-01T11:50:00.000Z"
+    },
+    "frame_rainbow": {
+      "salePrice": 800,
+      "saleUntil": "2026-09-13T13:22:00.000Z"
+    },
+    "frame_tech": {
+      "price": 4000,
+      "salePrice": 3999,
+      "saleUntil": "2026-09-20T09:42:00.000Z"
+    },
+    "frame_crown": {
+      "price": 3000000000,
+      "salePrice": 20000,
+      "saleUntil": "2026-09-13T13:10:00.000Z"
+    },
+    "frame_thunder": {
+      "salePrice": 349,
+      "saleUntil": "2026-09-13T12:37:00.000Z"
+    },
+    "frame_bubbles": {
+      "salePrice": 100,
+      "saleUntil": "2026-09-19T23:30:00.000Z"
+    }
+  }
+}

@@ -1,0 +1,433 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@12.0.2
+2 info using node@v24.21.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/container/.npmrc
+5 silly config load:file:/usr/local/etc/npmrc
+6 verbose title npm install
+7 verbose argv "install"
+8 verbose logfile logs-max:10 dir:/home/container/.npm/_logs/2026-09-24T12_46_48_182Z-
+9 verbose logfile /home/container/.npm/_logs/2026-09-24T12_46_48_182Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:271581184 maxSize:67895296 maxEntrySize:33947648
+13 silly idealTree buildDeps
+14 silly reify moves {}
+15 silly audit bulk request {
+15 silly audit   '@discordjs/builders': [ '1.14.1' ],
+15 silly audit   '@discordjs/collection': [ '1.5.3', '2.1.1' ],
+15 silly audit   '@discordjs/formatters': [ '0.6.2' ],
+15 silly audit   '@discordjs/rest': [ '2.6.1' ],
+15 silly audit   '@sapphire/snowflake': [ '3.5.5', '3.5.3' ],
+15 silly audit   '@discordjs/util': [ '1.2.0' ],
+15 silly audit   '@discordjs/voice': [ '0.17.0' ],
+15 silly audit   'discord-api-types': [ '0.37.83', '0.38.47' ],
+15 silly audit   '@discordjs/ws': [ '1.2.3' ],
+15 silly audit   '@sapphire/async-queue': [ '1.5.5' ],
+15 silly audit   '@sapphire/shapeshift': [ '4.0.0' ],
+15 silly audit   '@types/node': [ '25.9.0' ],
+15 silly audit   '@types/ws': [ '8.18.1' ],
+15 silly audit   '@vladfrangu/async_event_emitter': [ '2.4.7' ],
+15 silly audit   accepts: [ '1.3.8' ],
+15 silly audit   'agent-base': [ '6.0.2', '7.1.4' ],
+15 silly audit   'array-flatten': [ '1.1.1' ],
+15 silly audit   'asn1.js': [ '5.4.1' ],
+15 silly audit   asynckit: [ '0.4.0' ],
+15 silly audit   axios: [ '1.16.1' ],
+15 silly audit   base64url: [ '3.0.1' ],
+15 silly audit   'bn.js': [ '4.12.4' ],
+15 silly audit   'body-parser': [ '1.20.5' ],
+15 silly audit   debug: [ '2.6.9', '4.4.3' ],
+15 silly audit   ms: [ '2.0.0', '2.1.3' ],
+15 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+15 silly audit   bytes: [ '3.1.2' ],
+15 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+15 silly audit   'call-bound': [ '1.0.4' ],
+15 silly audit   'combined-stream': [ '1.0.8' ],
+15 silly audit   'content-disposition': [ '0.5.4' ],
+15 silly audit   'content-type': [ '1.0.5' ],
+15 silly audit   cookie: [ '0.7.2' ],
+15 silly audit   'cookie-signature': [ '1.0.7' ],
+15 silly audit   'delayed-stream': [ '1.0.0' ],
+15 silly audit   depd: [ '2.0.0' ],
+15 silly audit   destroy: [ '1.2.0' ],
+15 silly audit   'discord.js': [ '14.26.4' ],
+15 silly audit   dotenv: [ '16.6.1' ],
+15 silly audit   'dunder-proto': [ '1.0.1' ],
+15 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+15 silly audit   'ee-first': [ '1.1.1' ],
+15 silly audit   encodeurl: [ '2.0.0' ],
+15 silly audit   'es-define-property': [ '1.0.1' ],
+15 silly audit   'es-errors': [ '1.3.0' ],
+15 silly audit   'es-object-atoms': [ '1.1.1' ],
+15 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+15 silly audit   'escape-html': [ '1.0.3' ],
+15 silly audit   etag: [ '1.8.1' ],
+15 silly audit   express: [ '4.22.2' ],
+15 silly audit   'express-rate-limit': [ '8.5.2' ],
+15 silly audit   'express-session': [ '1.19.0' ],
+15 silly audit   'fast-deep-equal': [ '3.1.3' ],
+15 silly audit   finalhandler: [ '1.3.2' ],
+15 silly audit   'follow-redirects': [ '1.16.0' ],
+15 silly audit   'form-data': [ '4.0.5' ],
+15 silly audit   forwarded: [ '0.2.0' ],
+15 silly audit   fresh: [ '0.5.2' ],
+15 silly audit   'function-bind': [ '1.1.2' ],
+15 silly audit   'get-intrinsic': [ '1.3.0' ],
+15 silly audit   'get-proto': [ '1.0.1' ],
+15 silly audit   gopd: [ '1.2.0' ],
+15 silly audit   'has-symbols': [ '1.1.0' ],
+15 silly audit   'has-tostringtag': [ '1.0.2' ],
+15 silly audit   hasown: [ '2.0.3' ],
+15 silly audit   helmet: [ '8.2.0' ],
+15 silly audit   http_ece: [ '1.2.0' ],
+15 silly audit   'http-errors': [ '2.0.1' ],
+15 silly audit   'https-proxy-agent': [ '5.0.1', '7.0.6' ],
+15 silly audit   'iconv-lite': [ '0.4.24' ],
+15 silly audit   inherits: [ '2.0.4' ],
+15 silly audit   'ip-address': [ '10.2.0' ],
+15 silly audit   'ipaddr.js': [ '1.9.1' ],
+15 silly audit   jwa: [ '2.0.1' ],
+15 silly audit   jws: [ '4.0.1' ],
+15 silly audit   lodash: [ '4.18.1' ],
+15 silly audit   'lodash.snakecase': [ '4.1.1' ],
+15 silly audit   'magic-bytes.js': [ '1.13.0' ],
+15 silly audit   'math-intrinsics': [ '1.1.0' ],
+15 silly audit   'media-typer': [ '0.3.0' ],
+15 silly audit   'merge-descriptors': [ '1.0.3' ],
+15 silly audit   methods: [ '1.1.2' ],
+15 silly audit   mime: [ '1.6.0' ],
+15 silly audit   'mime-db': [ '1.52.0' ],
+15 silly audit   'mime-types': [ '2.1.35' ],
+15 silly audit   'minimalistic-assert': [ '1.0.1' ],
+15 silly audit   minimist: [ '1.2.8' ],
+15 silly audit   negotiator: [ '0.6.3' ],
+15 silly audit   oauth: [ '0.10.2' ],
+15 silly audit   'object-inspect': [ '1.13.4' ],
+15 silly audit   'on-finished': [ '2.4.1' ],
+15 silly audit   'on-headers': [ '1.1.0' ],
+15 silly audit   parseurl: [ '1.3.3' ],
+15 silly audit   passport: [ '0.7.0' ],
+15 silly audit   'passport-discord': [ '0.1.4' ],
+15 silly audit   'passport-oauth2': [ '1.8.0' ],
+15 silly audit   'passport-strategy': [ '1.0.0' ],
+15 silly audit   'path-to-regexp': [ '0.1.13' ],
+15 silly audit   pause: [ '0.0.1' ],
+15 silly audit   'prism-media': [ '1.3.5' ],
+15 silly audit   'proxy-addr': [ '2.0.7' ],
+15 silly audit   'proxy-from-env': [ '2.1.0' ],
+15 silly audit   qs: [ '6.15.2' ],
+15 silly audit   'random-bytes': [ '1.0.0' ],
+15 silly audit   'range-parser': [ '1.2.1' ],
+15 silly audit   'raw-body': [ '2.5.3' ],
+15 silly audit   'safe-buffer': [ '5.2.1' ],
+15 silly audit   'safer-buffer': [ '2.1.2' ],
+15 silly audit   send: [ '0.19.2' ],
+15 silly audit   'serve-static': [ '1.16.3' ],
+15 silly audit   setprototypeof: [ '1.2.0' ],
+15 silly audit   'side-channel': [ '1.1.0' ],
+15 silly audit   'side-channel-list': [ '1.0.1' ],
+15 silly audit   'side-channel-map': [ '1.0.1' ],
+15 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+15 silly audit   statuses: [ '2.0.2' ],
+15 silly audit   toidentifier: [ '1.0.1' ],
+15 silly audit   'ts-mixer': [ '6.0.4' ],
+15 silly audit   tslib: [ '2.8.1' ],
+15 silly audit   'type-is': [ '1.6.18' ],
+15 silly audit   'uid-safe': [ '2.1.5' ],
+15 silly audit   uid2: [ '0.0.4' ],
+15 silly audit   undici: [ '6.24.1' ],
+15 silly audit   'undici-types': [ '7.24.6' ],
+15 silly audit   unpipe: [ '1.0.0' ],
+15 silly audit   'utils-merge': [ '1.0.1' ],
+15 silly audit   vary: [ '1.1.2' ],
+15 silly audit   'web-push': [ '3.6.7' ],
+15 silly audit   ws: [ '8.20.1' ]
+15 silly audit }
+16 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 1371ms
+17 silly audit report {
+17 silly audit report   axios: [
+17 silly audit report     {
+17 silly audit report       id: 1147949,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-mmx7-hfxf-jppx',
+17 silly audit report       title: 'Axios: Prototype pollution gadgets can alter axios request construction',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=1.0.0 <1.18.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1147950,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-pmv8-rq9r-6j72',
+17 silly audit report       title: 'Axios: Deep formToJSON Key Recursion Can Cause Denial of Service',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=1.0.0 <1.18.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1138749,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-xj6q-8x83-jv6g',
+17 silly audit report       title: 'Axios: Prototype pollution auth subfields can inject Basic auth',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=1.15.2 <1.18.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1193664,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-hcpx-6fm6-wx23',
+17 silly audit report       title: 'Axios form serializer maxDepth bypass via {} metatoken',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=1.15.1 <1.18.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1153175,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-mwf2-3pr3-8698',
+17 silly audit report       title: 'Axios: HTTP/2 streamed uploads bypass `maxBodyLength`',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=1.13.0 <1.18.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1153178,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-gcfj-64vw-6mp9',
+17 silly audit report       title: 'Axios Node HTTP adapter can use an inherited proxy after interceptor config cloning',
+17 silly audit report       severity: 'high',
+17 silly audit report       vulnerable_versions: '>=1.15.2 <1.18.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1153180,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-7q8q-rj6j-mhjq',
+17 silly audit report       title: 'Axios: Nested axios option objects can consume polluted prototype values',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=1.0.0 <1.18.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1153182,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-jqh4-m9w3-8hp9',
+17 silly audit report       title: 'Axios: Fetch adapter `ReadableStream` uploads bypass `maxBodyLength`',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=1.7.0 <1.18.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1153184,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-f4gw-2p7v-4548',
+17 silly audit report       title: 'Axios: NO_PROXY bypass for 0.0.0.0 local addresses in axios',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=1.15.0 <1.18.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1153185,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-42h9-826w-cgv3',
+17 silly audit report       title: 'Axios: Excessive recursion in formDataToJSON can cause denial of service',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=1.0.0 <1.18.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     }
+17 silly audit report   ],
+17 silly audit report   'body-parser': [
+17 silly audit report     {
+17 silly audit report       id: 1123977,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-v422-hmwv-36x6',
+17 silly audit report       title: 'body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement',
+17 silly audit report       severity: 'low',
+17 silly audit report       vulnerable_versions: '<1.20.6',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     }
+17 silly audit report   ],
+17 silly audit report   'form-data': [
+17 silly audit report     {
+17 silly audit report       id: 1120743,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-hmw2-7cc7-3qxx',
+17 silly audit report       title: 'form-data: CRLF injection in form-data via unescaped multipart field names and filenames',
+17 silly audit report       severity: 'high',
+17 silly audit report       vulnerable_versions: '>=4.0.0 <4.0.6',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     }
+17 silly audit report   ],
+17 silly audit report   'ip-address': [
+17 silly audit report     {
+17 silly audit report       id: 1130722,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-mwp4-54f8-5fhr',
+17 silly audit report       title: 'ip-address: Address4 decodes leading-zero octets as decimal while resolvers decode them as octal, allowing SSRF and trust-boundary bypass',
+17 silly audit report       severity: 'high',
+17 silly audit report       vulnerable_versions: '<=10.3.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1130723,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-4xrf-jv44-h6hh',
+17 silly audit report       title: 'ip-address: a CIDR suffix on the parsed address suppresses special-use classification and can bypass SSRF and trust-boundary checks',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=10.1.1 <=10.2.1',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1130724,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-22jq-vg5j-6vgg',
+17 silly audit report       title: 'ip-address: misclassification of IPv4-mapped/NAT64 IPv6 addresses can bypass SSRF and trust-boundary checks',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=10.1.1 <=10.2.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     }
+17 silly audit report   ],
+17 silly audit report   qs: [
+17 silly audit report     {
+17 silly audit report       id: 1158506,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-x5fp-wj9c-mxmx',
+17 silly audit report       title: 'qs array-limit bypass via bracket-key comma parsing',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=6.14.2 <=6.15.3',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1158507,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-4mjr-xmp4-gh2g',
+17 silly audit report       title: 'qs: Denial of Service via Attacker Controlled isBuffer',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=2.2.5 <6.16.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     }
+17 silly audit report   ],
+17 silly audit report   undici: [
+17 silly audit report     {
+17 silly audit report       id: 1130716,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-8xcm-r25x-g524',
+17 silly audit report       title: 'undici vulnerable to downstream response desynchronization via retry interceptor',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '<6.28.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1130727,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-m8rv-5g2x-5cg5',
+17 silly audit report       title: "undici vulnerable to CRLF Injection via blob-like body 'type' property",
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '<6.28.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1130732,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-v3r7-h72x-cjcm',
+17 silly audit report       title: 'undici vulnerable to cookie attribute injection via unsanitized domain and unparsed setCookie fields',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '<6.28.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1121242,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-p88m-4jfj-68fv',
+17 silly audit report       title: 'undici vulnerable to HTTP header injection via Set-Cookie percent-decoding',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '<6.27.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1121245,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-vxpw-j846-p89q',
+17 silly audit report       title: 'undici WebSocket client vulnerable to denial of service via fragment count bypass',
+17 silly audit report       severity: 'high',
+17 silly audit report       vulnerable_versions: '<6.27.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1121255,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-g8m3-5g58-fq7m',
+17 silly audit report       title: 'undici vulnerable to Set-Cookie SameSite attribute downgrade via permissive substring matching',
+17 silly audit report       severity: 'low',
+17 silly audit report       vulnerable_versions: '<6.27.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1137243,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-35p6-xmwp-9g52',
+17 silly audit report       title: 'undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse',
+17 silly audit report       severity: 'low',
+17 silly audit report       vulnerable_versions: '<6.27.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     }
+17 silly audit report   ],
+17 silly audit report   ws: [
+17 silly audit report     {
+17 silly audit report       id: 1123259,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-96hv-2xvq-fx4p',
+17 silly audit report       title: 'ws: Memory exhaustion DoS from tiny fragments and data chunks',
+17 silly audit report       severity: 'high',
+17 silly audit report       vulnerable_versions: '>=8.0.0 <8.21.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     }
+17 silly audit report   ]
+17 silly audit report }
+18 silly packumentCache corgi:https://registry.npmjs.org/axios cache-miss
+19 silly packumentCache corgi:https://registry.npmjs.org/body-parser cache-miss
+20 silly packumentCache corgi:https://registry.npmjs.org/form-data cache-miss
+21 silly packumentCache corgi:https://registry.npmjs.org/ip-address cache-miss
+22 silly packumentCache corgi:https://registry.npmjs.org/qs cache-miss
+23 silly packumentCache corgi:https://registry.npmjs.org/undici cache-miss
+24 silly packumentCache corgi:https://registry.npmjs.org/ws cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/axios 605ms (cache revalidated)
+26 silly packumentCache corgi:https://registry.npmjs.org/axios set size:303552 disposed:false
+27 http fetch GET 200 https://registry.npmjs.org/body-parser 799ms (cache revalidated)
+28 silly packumentCache corgi:https://registry.npmjs.org/body-parser set size:82509 disposed:false
+29 http fetch GET 200 https://registry.npmjs.org/ip-address 806ms (cache revalidated)
+30 silly packumentCache corgi:https://registry.npmjs.org/ip-address set size:86272 disposed:false
+31 http fetch GET 200 https://registry.npmjs.org/form-data 809ms (cache revalidated)
+32 silly packumentCache corgi:https://registry.npmjs.org/form-data set size:55002 disposed:false
+33 http fetch GET 200 https://registry.npmjs.org/undici 887ms (cache revalidated)
+34 silly packumentCache corgi:https://registry.npmjs.org/undici set size:465015 disposed:false
+35 http fetch GET 200 https://registry.npmjs.org/ws 989ms (cache revalidated)
+36 silly packumentCache corgi:https://registry.npmjs.org/ws set size:207962 disposed:false
+37 http fetch GET 200 https://registry.npmjs.org/qs 997ms (cache revalidated)
+38 silly packumentCache corgi:https://registry.npmjs.org/qs set size:149425 disposed:false
+39 silly packumentCache corgi:https://registry.npmjs.org/express cache-miss
+40 http fetch GET 200 https://registry.npmjs.org/express 323ms (cache revalidated)
+41 silly packumentCache corgi:https://registry.npmjs.org/express set size:341170 disposed:false
+42 silly packumentCache corgi:https://registry.npmjs.org/express-rate-limit cache-miss
+43 http fetch GET 200 https://registry.npmjs.org/express-rate-limit 95ms (cache revalidated)
+44 silly packumentCache corgi:https://registry.npmjs.org/express-rate-limit set size:184416 disposed:false
+45 silly packumentCache corgi:https://registry.npmjs.org/@discordjs%2frest cache-miss
+46 silly packumentCache corgi:https://registry.npmjs.org/discord.js cache-miss
+47 http fetch GET 200 https://registry.npmjs.org/discord.js 193ms (cache revalidated)
+48 silly packumentCache corgi:https://registry.npmjs.org/discord.js set size:4106123 disposed:false
+49 http fetch GET 200 https://registry.npmjs.org/@discordjs%2frest 911ms (cache revalidated)
+50 silly packumentCache corgi:https://registry.npmjs.org/@discordjs%2frest set size:2960838 disposed:false
+51 silly packumentCache corgi:https://registry.npmjs.org/@discordjs%2fvoice cache-miss
+52 silly packumentCache corgi:https://registry.npmjs.org/@discordjs%2fws cache-miss
+53 http fetch GET 200 https://registry.npmjs.org/@discordjs%2fws 123ms (cache revalidated)
+54 silly packumentCache corgi:https://registry.npmjs.org/@discordjs%2fws set size:2769199 disposed:false
+55 http fetch GET 200 https://registry.npmjs.org/@discordjs%2fvoice 809ms (cache revalidated)
+56 silly packumentCache corgi:https://registry.npmjs.org/@discordjs%2fvoice set size:2986056 disposed:false
+57 verbose cwd /home/container
+58 verbose os Linux 6.8.0-87-generic
+59 verbose node v24.21.0
+60 verbose npm  v12.0.2
+61 verbose exit 0
+62 info ok

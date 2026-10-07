@@ -1,0 +1,25 @@
+[
+  {
+    "id": "mtehvloypbct",
+    "name": "RVX",
+    "description": "เปิดเพลง ดูดเพลง กันนั่ง100%ไม่มีติด และอื่นๆอีกมากมาย",
+    "category": "Brookhaven RP",
+    "version": "v1.0",
+    "hasKey": true,
+    "keyNote": "",
+    "imageUrl": "https://cdn.discordapp.com/ephemeral-attachments/1530159237236260946/1543270284789022791/nobg_cover.png?ex=6a9441f4&is=6a92f074&hm=abc48afc3e450f3db5ba7f0ad61d4c9d39e0ddc2d3ac6396ce1398ecc2555530&",
+    "rawScript": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/RVXv2/RVX-hub/main/main.lua\"))()",
+    "url": "https://raw.githubusercontent.com/RVXv2/RVX-hub/main/main.lua",
+    "channelId": "1524197944067358871",
+    "guildId": "1514875481315344486",
+    "messageId": "1543270889544482837",
+    "addedBy": "1221412727306850355",
+    "addedAt": 1788014852242,
+    "lastStatus": false,
+    "lastCheckedAt": 1791062894938,
+    "lastError": "HTTP 404",
+    "lastResponseTime": 199,
+    "checksTotal": 10178,
+    "checksOnline": 8310
+  }
+]

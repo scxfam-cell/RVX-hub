@@ -1,0 +1,27 @@
+{
+  "name": "song-id-guardian-bot",
+  "version": "2.0.0",
+  "description": "🎵 Full-system Discord bot สำหรับจัดการไอดีเพลง",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5",
+    "axios": "^1.7.2",
+    "@discordjs/voice": "^0.17.0",
+    "passport": "^0.7.0",
+    "passport-discord": "^0.1.4",
+    "express-session": "^1.18.0",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.2.0",
+    "web-push": "^3.6.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

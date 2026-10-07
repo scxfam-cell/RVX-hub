@@ -1,0 +1,65 @@
+[
+  {
+    "id": "90dd3721",
+    "hash": "7ac48c86922e0ad888905191f96e89646f579b0607bd3598bdc0b8fdc4ed4f65",
+    "prefix": "sgid_dff6e5ad0…",
+    "label": "Hee",
+    "createdAt": "2026-07-08T08:51:51.250Z",
+    "createdBy": "1221412727306850355",
+    "expiresAt": "2026-07-09T08:51:51.249Z"
+  },
+  {
+    "id": "8f1eb38e",
+    "hash": "f5479e3c736117bcf27538c713299fbb2b1f1193979978416f1e509ea6ccdd0e",
+    "prefix": "sgid_bc50ea340…",
+    "label": "Abideen",
+    "createdAt": "2026-07-19T07:21:10.138Z",
+    "createdBy": "1221412727306850355",
+    "expiresAt": null
+  },
+  {
+    "id": "244b0b02",
+    "hash": "e843289fc820adc114a966dd99e9d7ba910a688a3a044ca9a4d823e48c45575f",
+    "prefix": "sgid_cc01b03b8…",
+    "label": "rvx",
+    "createdAt": "2026-07-24T19:27:34.849Z",
+    "createdBy": "1221412727306850355",
+    "expiresAt": null
+  },
+  {
+    "id": "687d5ad8",
+    "hash": "282fb41780837623e629b7826180ce50d01c9a4391930bb723acd3e4ca6c476f",
+    "prefix": "sgid_169a4cd43…",
+    "label": "aa",
+    "createdAt": "2026-08-07T09:51:31.229Z",
+    "createdBy": "1221412727306850355",
+    "expiresAt": null
+  },
+  {
+    "id": "6d5b55ff",
+    "hash": "201db2e5df03ae2e4860c75dd6aa1253ac35455c967f365b67033273afd57f32",
+    "prefix": "sgid_08168ec5e…",
+    "label": "RP",
+    "createdAt": "2026-08-07T09:55:00.566Z",
+    "createdBy": "1221412727306850355",
+    "expiresAt": null
+  },
+  {
+    "id": "df12de43",
+    "hash": "ba1f509e749c1093d577cd2f725465a98fd8eccc4b7b36e68099474fcf53ac04",
+    "prefix": "sgid_31b869012…",
+    "label": "urvxhub",
+    "createdAt": "2026-08-31T04:00:42.554Z",
+    "createdBy": "1221412727306850355",
+    "expiresAt": null
+  },
+  {
+    "id": "b76b2b7a",
+    "hash": "db520eebec9aaf9ef026dcffe606720a2e79d25c9d33c94b80dfd2bf1e09deef",
+    "prefix": "sgid_cbff304e9…",
+    "label": "แจกฟรี",
+    "createdAt": "2026-09-09T07:14:16.465Z",
+    "createdBy": "1221412727306850355",
+    "expiresAt": null
+  }
+]
